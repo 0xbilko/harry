@@ -1,0 +1,540 @@
+@font-face {font-family: 'FontAwesome';src: url('fonts/fontawesome-webfont.eot?v=4.4.0');src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');font-weight: normal;font-style: normal;}
+body{font-family:"Lucida Grande",Verdana,Arial,Helvetica,sans-serif;font-size:11px;color:#333;) repeat #d1d5d8;margin:0;}
+body.login-page {background-color: #e0f7ff}
+body.noscroll{overflow:hidden}
+a{color:#285c92}
+a:visited{color:#0186ba}
+img{border:0}
+.voice{position:absolute;border:0;clip:rect(0 0 0 0);width:1px;height:1px;margin:-1px;padding:0;overflow:hidden}
+html.mozilla select{padding:2px 1px}
+input,textarea,select,button{font-family:inherit;font-size:inherit;vertical-align:middle}
+input[type="text"],input[type="password"],textarea{margin:0;padding:6px 0;border:1px solid #b2b2b2;border-radius:4px;box-shadow:inset 0 0 2px 1px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0 0 2px 1px rgba(0,0,0,0.1)}
+input[type="text"]:focus,input[type="password"]:focus,input.button:focus,textarea:focus{border-color:#569be4;box-shadow:0 0 2px 1px rgba(86,155,288,0.9);-webkit-box-shadow:0 0 2px 1px rgba(86,155,288,0.9);outline:0}
+input[type="text"]:required,input[type="password"]:required{border-color:#569be4}
+input.placeholder,textarea.placeholder{color:#aaa}
+.bold{font-weight:bold}
+label input+span{vertical-align:middle}
+input.button{-moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;-webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;box-shadow:inset 0px 1px 0px 0px #54a3f7;background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);background-color:#007dc1;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;border:1px solid #124d77;display:inline-block;cursor:pointer;color:#ffffff;font-family:Arial;	font-size:13px;padding:6px 24px;text-decoration:none;text-shadow:0px 1px 0px #154682;}
+input.button:hover,input.button:focus,input.button.mainaction:hover,input.button.mainaction:focus{background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);background-color:#0061a7;}
+input.button:active{position:relative;top:1px;}
+input.button{-moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;-webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;	box-shadow:inset 0px 1px 0px 0px #54a3f7;background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);background-color:#007dc1;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;border:1px solid #124d77;display:inline-block;cursor:pointer;color:#ffffff;font-family:Arial;	font-size:13px;padding:6px 24px;text-decoration:none;text-shadow:0px 1px 0px #154682;}
+input.button[disabled],input.button[disabled]:hover,input.button.mainaction[disabled]{color:#aaa !important}
+input.mainaction{font-weight:bold}
+a.button,.buttongroup{display:inline-block;margin:0 2px;padding:2px 5px;text-decoration:none}
+.buttongroup{padding:0;white-space:nowrap}
+a.button:focus,input.button:focus{border-color:#4fadd5;box-shadow:0 0 2px 1px rgba(71,135,177,0.6);-webkit-box-shadow:0 0 2px 1px rgba(71,135,177,0.6);outline:0}
+label.disabled,a.button.disabled{color:#999}
+a.button.disabled,input.button.disabled,input.button[disabled],a.button.disabled:hover,input.button.disabled:hover,input.button[disabled]:hover{border-color:#c6c6c6;}
+a.button.disabled span.inner{opacity:.4}
+.buttongroup a.button{margin:0;border-width:0 1px 0 0;border-radius:0;background:0;box-shadow:none;-webkit-box-shadow:none}
+.buttongroup a.button.first,.buttongroup a.button:first-child{border-radius:4px 0 0 4px;border-left:0}
+.buttongroup a.button.last,.buttongroup a.button:last-child{border-radius:0 4px 4px 0;border-right:0}
+a.button.pressed,a.button:active,input.button:active{}
+.pagenav.dark a.button{font-weight:bold;}
+.pagenav.dark a.button.pressed{}
+.buttongroup a.button.selected,.buttongroup a.button.selected:hover{background:#285C92;border-right-color:#555;border-left-color:#555;color: #fff}
+.buttongroup a.button:focus,.buttongroup a.button.selected:focus{background:#285C92;color: #fff}
+.pagenav a.button{padding:1px 3px;height:16px;vertical-align:middle;margin-bottom:1px}
+.pagenav .buttongroup a.button,.pagenav .buttongroup a.button:hover{padding:1px 5px;margin-bottom:0}
+a.button span.icon,.pagenav a.button span.inner{display:inline-block;width:16px;height:13px;overflow:hidden;letter-spacing:20px}
+.pagenav .countdisplay{display:inline-block;padding:3px 1em 0 1em;text-shadow:0 1px 1px #fff;min-width:16em}
+.pagenavbuttons{position:relative;}
+a.iconbutton{display:inline-block;width:20px;height:18px;text-decoration:none;text-indent:-5000px;background:url(images/buttons.png?v=51d4.15699) -1000px 0 no-repeat}
+a.iconbutton.disabled{opacity:.4;cursor:default}
+a.iconbutton.searchicon,a.iconbutton.searchoptions{width:17px;overflow: hidden;background-position:-2px -317px}
+a.iconbutton.reset{width:16px;overflow: hidden;height: 18px}
+a.iconbutton.remove,a.iconbutton.cancel{background-position:-7px -378px}
+a.iconbutton.delete{background-position:-7px -338px}
+a.iconbutton.add{background-position:-7px -358px}
+a.iconbutton.remove{background-position:-7px -379px}
+a.iconbutton.cancel{background-position:-7px -398px}
+a.iconbutton.edit{background-position:-7px -418px}
+a.iconbutton.upload{background-position:-6px -438px}
+a.iconlink{display:inline-block;text-decoration:none;white-space:nowrap;padding:2px 8px 2px 20px;background:url(images/buttons.png?v=51d4.15699) -1000px 0 no-repeat}
+a.iconlink:hover{text-decoration:underline}
+a.iconlink.delete{background-position:-7px -337px}
+a.iconlink.add:before {font-size: 14px;padding-right: 5px;text-decoration:none;content: "\f055"}
+a.iconlink.add:hover:before {display: inline-block;text-decoration:none}
+a.iconlink.remove{background-position:-7px -378px}
+a.iconlink.cancel{background-position:-7px -397px}
+a.iconlink.edit:before {font-size: 14px;padding-right: 5px;text-decoration:none;content: "\f040"}
+a.iconlink.edit:hover:before {display: inline-block;text-decoration:none}
+a.iconlink.upload{background-position:-6px -437px}
+#message div.loading,#message div.uploading,#message div.warning,#message div.error,#message div.notice,#message div.confirmation,#message-objects div.notice{color:#555;font-weight:bold;padding:6px 30px 6px 25px;display:inline-block;white-space:nowrap;background:url(images/messages.png?v=3a4f.1461) 0 5px no-repeat;cursor:default}
+#message div.warning{color:#960;background-position:0 -86px}
+#message div.error{color:#cf2734;background-position:0 -55px}
+#message div.confirmation{color:#093;background-position:0 -25px}
+#message div.loading{background:url(images/ajaxloader.gif?v=c252.1434) 2px 6px no-repeat}
+#message div a,#message div span{padding-right:.5em;text-decoration:none}
+#message div a:hover{text-decoration:underline;cursor:pointer}
+#message.statusbar{display:none;position:absolute;bottom:0;left:0;right:0;height:27px;padding-left:8px;border-top:1px solid #ddd;border-radius:0 0 4px 4px;background:#eaeaea;background:-moz-linear-gradient(top,#eaeaea 0,#c8c8c8 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#eaeaea),color-stop(100%,#c8c8c8));background:-o-linear-gradient(top,#eaeaea 0,#c8c8c8 100%);background:-ms-linear-gradient(top,#eaeaea 0,#c8c8c8 100%);background:linear-gradient(to bottom,#eaeaea 0,#c8c8c8 100%);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#messagestack{position:absolute;bottom:20px;right:12px;z-index:50000;width:auto;height:auto;max-height:85%;overflow-y:auto;padding:2px}
+#messagestack div{display:block;position:relative;width:280px;height:auto;min-height:16px;margin:3px 2px 5px 2px;padding:8px 10px 7px 30px;cursor:default;font-size:12px;font-weight:bold;border-radius:4px}
+#messagestack div:after{content:"";position:absolute;display:block;top:0;left:4px;width:20px;height:24px}
+#messagestack div.error{background: url(images/error.png) no-repeat #FBE3E4 5px 5px; padding: 1em; padding-left: 3.5em; border: 2px solid #FBC2C4; color: #D12F19;}
+#messagestack div.warning{background: url(images/warning.png) no-repeat #FFF6BF 5px 5px; padding: 1em;padding-left: 3.5em;  border: 2px solid #FFD324; color: #817134}
+#messagestack div.confirmation{background: url(images/success.png) no-repeat #E6EFC2 5px 5px; padding: 1em; padding-left: 3.5em; border: 2px solid #C6D880;  color: #529214;}
+#messagestack div.uploading,#messagestack div.loading{color:#ddd}
+#messagestack div.uploading:after,#messagestack div.loading:after{top:4px;left:6px;background:url(images/ajaxloader.gif?v=cf1b.1849) 0 4px no-repeat}
+#messagestack div.voice{position:absolute;top:-1000px}
+#messagestack div a{color:#94c0da}
+#messagestack div a:hover{text-decoration:underline;cursor:pointer}
+.ui-dialog.error .ui-dialog-title,.ui-dialog.warning .ui-dialog-title,.ui-dialog.confirmation .ui-dialog-title{padding-left:25px;background:url(images/messages.png?v=3a4f.1461) 0 5px no-repeat;text-shadow:0 1px 1px #fff}
+.ui-dialog.warning .ui-dialog-title{color:#960;background-position:0 -90px}
+.ui-dialog.error .ui-dialog-title{color:#cf2734;background-position:0 -60px}
+.ui-dialog.confirmation .ui-dialog-title{color:#093;background-position:0 -30px}
+.ui-dialog.popupmessage .ui-dialog-titlebar{padding:8px 1em 4px 1em;background:#e3e3e3;background:-moz-linear-gradient(top,#e3e3e3 0,#cfcfcf 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#e3e3e3),color-stop(100%,#cfcfcf));background:-o-linear-gradient(top,#e3e3e3 0,#cfcfcf 100%);background:-ms-linear-gradient(top,#e3e3e3 0,#cfcfcf 100%);background:linear-gradient(to bottom,#e3e3e3 0,#cfcfcf 100%)}
+.ui-dialog.popupmessage .ui-widget-content{font-size:12px;background:#eee;background:-moz-linear-gradient(top,#eee 0,#dcdcdc 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#eee),color-stop(100%,#dcdcdc));background:-o-linear-gradient(top,#eee 0,#dcdcdc 100%);background:-ms-linear-gradient(top,#eee 0,#dcdcdc 100%);background:linear-gradient(to bottom,#eee 0,#dcdcdc 100%)}
+#header{overflow-x:hidden}
+#topline{height:18px;background:-moz-linear-gradient(top,#103963 0,#285c92 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#103963),color-stop(100%,#285c92));background:-o-linear-gradient(top,#103963 0,#285c92 100%);background:-ms-linear-gradient(top,#103963 0,#285c92 100%);background:linear-gradient(to bottom,#103963 0,#285c92 100%);border-bottom:1px solid #103963;padding:2px 0 2px 10px;color:#aaa;text-align:center}
+#topnav{position:relative;height:46px;margin-bottom:10px;padding:0 0 0 10px;background:#111;background:-moz-linear-gradient(top,#569be4 0,#285c92 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#569be4),color-stop(100%,#285c92));background:-o-linear-gradient(top,#569be4 0,#285c92 100%);background:-ms-linear-gradient(top,#569be4 0,#285c92 100%);background:linear-gradient(to bottom,#569be4 0,#285c92 100%)}
+#topline a,#topnav a{color:#eee;text-decoration:none}
+#topline a:hover{text-decoration:underline}
+#toplogo{padding-top:2px;cursor:pointer;border:0}
+.topleft{float:left}
+.topright{float:right}
+.closelink{display:inline-block;padding:2px 10px 2px 20px}
+#topline span.username{padding-right:1em}
+#topline .topleft a{display:inline-block;padding:2px .8em 0 0;color:#aaa}
+#topline a.button-logout{display:inline-block;padding:2px 10px 2px 20px}
+#taskbar .button-logout{display:none}
+#taskbar a.button-logout span.button-inner{background-position:-2px -1791px}
+#taskbar a.button-logout:hover span.button-inner{background-position:-2px -1829px}
+.minimal #topline{position:fixed;top:-18px;background:-moz-linear-gradient(top,#103963 0,#285c92 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#103963),color-stop(100%,#285c92));background:-o-linear-gradient(top,#103963 0,#285c92 100%);background:-ms-linear-gradient(top,#103963 0,#285c92 100%);background:linear-gradient(to bottom,#103963 0,#285c92 100%);z-index:5000;width:100%;height:22px;-moz-box-sizing:border-box;box-sizing:border-box}
+.minimal #topline:hover{top:0;opacity:.94;-webkit-transition:top .3s ease-in-out;-moz-transition:top .3s ease-in-out;-o-transition:top .3s ease-in-out;transition:top .3s ease-in-out}
+.extwin #topline,.extwin #topline:hover{position:static;top:0;height:18px;width:auto;-moz-box-sizing:content-box;box-sizing:content-box;opacity:.999}
+.minimal #topline a.button-logout{display:none}
+.minimal #topline span.username{display:inline-block;padding-top:2px}
+.minimal #topnav{position:relative;top:4px;height:42px}
+.minimal #taskbar a{position:relative;padding:10px 10px 0 6px;height:32px}
+.minimal #taskbar .button-logout{display:inline-block}
+.minimal #taskbar .button-inner{padding:0;height:24px !important;width:27px;overflow: hidden; letter-spacing: 20px;padding-left: 12px}
+#taskbar .tooltip{display:none}
+.minimal #taskbar .tooltip{position:absolute;top:-500px;right:2px;display:inline-block;padding:2px 8px 3px 8px;background:#444;background:-moz-linear-gradient(top,#444 0,#333 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#444),color-stop(100%,#333));background:-o-linear-gradient(top,#444 0,#333 100%);background:-ms-linear-gradient(top,#444 0,#333 100%);background:linear-gradient(to bottom,#444 0,#333 100%);color:#eee;font-weight:bold;white-space:nowrap;border:1px solid #777;box-shadow:0 1px 5px 0 #333;-webkit-box-shadow:0 1px 5px 0 #333;z-index:200;white-space:nowrap;text-shadow:0 1px 1px #000}
+.minimal #taskbar .tooltip:after{content:"";position:absolute;top:-4px;right:15px;border-style:solid;border-width:0 4px 4px;border-color:#888 transparent;display:block;width:0;z-index:251}
+.minimal #taskbar a:hover .tooltip{display:block;top:39px}
+#taskbar{position:relative;padding-right:18px}
+#taskbar a{display:inline-block;height:34px;padding:12px 10px 0 6px}
+#taskbar a span.button-inner{display:inline-block;font-size:110%;font-weight:normal;text-shadow:0 1px 1px black;padding:5px 0 0 5px;height:19px}
+#taskbar a:focus{color:#fff;text-shadow:0 1px 1px #666;background-color:rgba(73,180,210,0.7);outline:0}
+#taskbar a.button-selected{color:#3cf;background-color:#005793}
+#taskbar a.button-mail span.button-inner{background-position:0 2px}
+#taskbar a.button-mail:hover span.button-inner,#taskbar a.button-mail.button-selected span.button-inner{background-position:0 -22px}
+#taskbar a.button-addressbook span.button-inner{background-position:0 -48px}
+#taskbar a.button-addressbook:hover span.button-inner,#taskbar a.button-addressbook.button-selected span.button-inner{background-position:0 -72px}
+#taskbar a.button-settings span.button-inner{background-position:0 -96px}
+#taskbar a.button-settings:hover span.button-inner,#taskbar a.button-settings.button-selected span.button-inner{background-position:0 -120px}
+#taskbar a.button-calendar span.button-inner{background-position:0 -144px}
+#taskbar a.button-calendar:hover span.button-inner,#taskbar a.button-calendar.button-selected span.button-inner{background-position:0 -168px}
+#taskbar .minmodetoggle{position:absolute;top:0;right:0;display:block;width:15px;height:26px;cursor:pointer;padding: 12px 0 0 5px;background:url(images/taskbar-border.png) no-repeat scroll -1px 3px}
+#mainscreen{position:absolute;top:88px;left:10px;right:10px;bottom:20px}
+#mainscreencontent{position:absolute;top:42px;left:0;right:0;bottom:0}
+#mainscreen.offset{top:132px}
+#mainscreen .offset{top:42px}
+.minimal #mainscreen{top:62px}
+.minimal #mainscreen.offset{top:102px}
+.extwin #mainscreen{top:40px}
+.extwin #mainscreen.offset{top:86px}
+.uibox{border:1px solid #a3a3a3;border-radius:4px;overflow:hidden;box-shadow:0 0 2px #999;-webkit-box-shadow:0 0 2px #999;background:#fff}
+.minwidth{min-width:1024px}
+.scroller{overflow:auto}
+.watermark{background-image:url(images/watermark.jpg?v=e784.5000);background-position:center;background-repeat:no-repeat}
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width:1024px){.iframebox{overflow:auto;-webkit-overflow-scrolling:touch}
+}
+.listbox{overflow:hidden}
+.listbox .scroller{position:absolute;top:0;left:0;width:100%;bottom:0;overflow-x:hidden;overflow-y:auto}
+.listbox .scroller.withfooter{bottom:42px}
+.listbox .boxtitle+.scroller{top:34px}
+.boxtitle,.uibox .listing thead th,.uibox .listing thead td{font-size:12px;font-weight:bold;padding:7px 8px 6px 8px;line-height:20px;margin:0;text-shadow:0 1px 1px #fff;border-bottom:1px solid #bbd3da;white-space:nowrap}
+.uibox .listing thead th,.uibox .listing thead td{padding-bottom:8px;height:auto}
+.uibox .boxtitle,.uibox .listing thead th,.uibox .listing thead td{background:#e0f7ff;color:#285c92;border-radius:4px 4px 0 0}
+.listbox .listitem,.listbox .tablink,.listing tbody td,.listing li{display:block;border-top:1px solid #fff;border-bottom:1px solid #bbd3da;cursor:default;font-weight:normal}
+.listbox .listitem a,.listbox .listitem span,.listbox .tablink a,.listing tbody td,.listing li a{display:block;color:#285c92;text-decoration:none;cursor:default;padding:4px 8px;line-height:17px;height:17px;white-space:nowrap}
+.listing tbody td{display:table-cell;min-height:14px;outline:0}
+.listing tbody td a{text-decoration:none}
+.webkit .listing tbody td{height:14px}
+.listing thead tr td:first-child,.listing tbody tr td:first-child{border-left:2px solid transparent;padding-left:6px}
+.listing.focus tbody tr.focused>td:first-child{border-left:2px solid #739da8}
+.listbox .listitem.selected,.listbox .tablink.selected,.listbox .listitem.selected>a,.listbox .tablink.selected>a,.listing tbody tr.selected td,.listing li.selected,.listing li.selected>a{color:#ffffff;font-weight:bold;background-color:#569BE4;}
+ul.listing{display:block;list-style:none;margin:0;padding:0}
+ul.listing li{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ul.listing li ul{border-top:1px solid #bbd3da}
+ul.listing li.droptarget,table.listing tr.droptarget td{background-color:#e8e798}
+table.listing,table.layout{border:0;width:100%;border-spacing:0}
+table.layout td{vertical-align:top}
+ul.treelist li{position:relative}
+ul.treelist li ul{margin:0;padding:0}
+ul.treelist li ul li:last-child{border-bottom:0}
+ul.treelist li a{display:block;overflow:hidden;text-overflow:ellipsis}
+ul.treelist li a:focus,ul.listing .listitem a:focus,ul.listing .listitem span:focus,ul.listing.focus .listitem.focused span{color:#fff !important;background-color:#569be4;outline:0}
+ul.treelist ul li a{padding-left:38px}
+ul.treelist ul ul li a{padding-left:54px}
+ul.treelist.iconized ul li a{padding-left:62px}
+ul.treelist.iconized ul ul li a{padding-left:88px}
+ul.treelist.iconized ul ul ul li a{padding-left:114px}
+ul.treelist li div.treetoggle{position:absolute;top:7px;left:4px;width:13px;height:13px;background:url(images/listicons.png?v=1877.13442) -3px -144px no-repeat;cursor:pointer}
+ul.treelist li ul li div.treetoggle{left:22px}
+ul.treelist.iconized li div.treetoggle{top:13px;left:19px}
+ul.treelist.iconized ul li div.treetoggle{left:45px}
+ul.treelist.iconized ul ul li div.treetoggle{left:71px}
+ul.treelist li div.treetoggle.expanded{background-position:-3px -168px}
+ul.treelist li.selected>div.collapsed{background-position:-23px -144px}
+ul.treelist li.selected>div.expanded{background-position:-23px -168px}
+.listbox .boxfooter{position:absolute;bottom:0;left:0;width:100%;height:42px;border-top:1px solid #ccdde4;background:#e0f7ff;box-shadow:inset 0 1px 0 0 #fff;-webkit-box-shadow:inset 0 1px 0 0 #fff;white-space:nowrap;overflow:hidden}
+.uibox .boxfooter{border-radius:0 0 4px 4px}
+.boxfooter .listbutton{display:inline-block;text-decoration:none;width:48px;border-right:1px solid #fff;background:#e0f7ff;padding:3px 0;margin-top:1px}
+.boxfooter a.listbutton:focus{color:#fff;background: #569be4 none repeat scroll 0 0;text-shadow:0 1px 1px #666;outline:0}
+.uibox .boxfooter .listbutton:first-child{border-radius:0 0 0 4px}
+.boxfooter .listbutton .inner{display:inline-block;width:38px;height:35px;font-size:18px;overflow: hidden;color: #285c92}
+.boxfooter .listbutton.add .inner{margin-left: 12px}
+.boxfooter .listbutton.delete .inner{background-position:10px -1342px}
+.boxfooter .listbutton.addto .inner, .boxfooter .listbutton.addcc .inner, .boxfooter .listbutton.addbcc .inner {margin:5px 0 0 5px}
+.boxfooter .listbutton.addcc .inner{background-position:5px -1462px}
+.boxfooter .listbutton.addbcc{width:54px}
+.boxfooter .listbutton.addbcc .inner{width:54px;background-position:2px -1502px}
+.boxfooter .listbutton.removegroup .inner{background-position:5px -1540px}
+.boxfooter .listbutton.disabled .inner{opacity:.4;color: #999}
+.boxfooter .countdisplay{display:inline-block;position:relative;color:#285c92}
+.boxpagenav{position:absolute;top:8px;right:6px;width:auto}
+.boxpagenav a.icon{display:inline-block;padding:0 3px;height:14px;width:14px;overflow:hidden;letter-spacing:20px;text-decoration: none;font-size:14px}
+.boxpagenav a.icon.disabled{opacity:.4}
+.centerbox{width:40em;margin:16px auto}
+.errorbox{width:40em;padding:20px}
+.errorbox h3{font-size:16px;margin-top:0}
+table.records-table{display:table;width:100%;table-layout:fixed;border-spacing:0;border:1px solid #bbd3da}
+.boxlistcontent .records-table{border:0}
+.records-table thead th,.records-table thead td{color:#69939e;font-size:11px;font-weight:bold;background:#e0f7ff;border-left:1px solid #bbd3da;padding:8px 7px;overflow:hidden;text-overflow:ellipsis;text-align:left}
+.records-table.sortheader thead th,.records-table.sortheader thead td{padding:0}
+.records-table thead th a,.records-table thead td a,.records-table thead th span,.records-table thead td span{display:block;padding:7px 7px;color:#285c92;text-decoration:none;overflow:hidden;text-overflow:ellipsis}
+.records-table thead th a:focus,.records-table thead td a:focus{color:#fff}
+.records-table tbody td{padding:2px 7px;border-bottom:1px solid #ddd;border-left:1px dotted #bbd3da;white-space:nowrap;cursor:default;overflow:hidden;text-overflow:ellipsis;background-color:#fff;outline:0}
+.records-table thead tr th:first-child,.records-table thead tr td:first-child,.records-table tbody tr td:first-child{border-left:2px solid transparent;padding-left:4px}
+.records-table.focus tbody tr.focused>td:first-child{border-left:2px solid #49b3d2}
+.records-table tr.selected td{color:#fff !important;background:#569be4}
+.records-table.focus tr.selected td{background:#569be4}
+.records-table tr.selected td a,.records-table tr.selected td span{color:#fff}
+.records-table tr.deleted td,.records-table tr.deleted td a{color:#ccc !important}
+#aboutframe{width:97%;height:100%;border:0;padding:0}
+body.iframe{background:#fff;margin:38px 0 10px 0}
+body.iframe.error{background:#ededed}
+body.iframe.floatingbuttons{margin-bottom:40px}
+body.iframe.fullheight{margin:0}
+.contentbox .boxtitle,body.iframe .boxtitle{color:#285c92;background:#e0f7ff;border-bottom:1px solid #ccc}
+body.iframe .boxtitle{position:fixed;top:0;left:0;width:100%;z-index:100}
+body.iframe .footerleft.floating,#composeview-bottom .formbuttons.floating{position:fixed;left:0;bottom:0;width:100%;z-index:110;background:#fff;padding-top:8px;padding-bottom:12px}
+body.iframe .footerleft.floating:before,#composeview-bottom .formbuttons.floating:before{content:" ";position:absolute;top:-6px;left:0;width:100%;height:6px;background:url(images/overflowshadow.png?v=71ba.250) top center no-repeat}
+.boxcontent{padding:10px}
+.contentbox .scroller{position:absolute;top:34px;left:0;right:0;bottom:0;overflow:auto}
+.iframebox{position:absolute;top:0;left:0;right:0;bottom:0}
+.footerleft{padding:0 12px 4px 12px}
+.propform fieldset{margin-bottom:20px;border:0;padding:0}
+.propform fieldset legend{display:block;font-size:14px;font-weight:bold;padding-bottom:10px;margin-bottom:0}
+.propform fieldset fieldset legend{color:#666;font-size:12px}
+.propform div.prop{margin-bottom:.5em}
+.propform div.prop.block label{display:block;margin-bottom:.3em}
+.propform div.prop.block input,.propform div.prop.block textarea{width:95%}
+.propform a.disabled{color:#999;text-decoration:none;cursor:default}
+fieldset.floating{float:left;margin-right:10px;margin-bottom:10px}
+table.propform{width:100%;border-spacing:0;border-collapse:collapse}
+ul.proplist li,table.propform td{width:80%;padding:4px 10px;background:#eafaff;border-bottom:2px solid #fff}
+table.propform td.title{width:20%;color:#333;padding-right:20px;white-space:nowrap}
+table.propform .mceLayout td{padding:0;border-bottom:0}
+ul.proplist{list-style:none;margin:0;padding:0}
+ul.proplist li{width:auto}
+#pluginbody{position:absolute;top:0;left:0;right:0;bottom:0}
+#login-form{position:relative;max-width:430px;margin:30ex auto}
+#login-form .box-inner{max-width:430px;background:#fff;border:1px solid #333;border-radius:10px;box-shadow:inset 0 0 1px #ccc;-webkit-box-shadow:inset 0 0 1px #ccc;overflow: hidden}
+#login-form .box-inner form {padding: 0 25px}
+#login-form .noscriptwarning{margin:0 auto;width:430px;color:#cf2734;font-size:110%;font-weight:bold}
+#login-form td.input{width:100%;padding:8px 0}
+#login-form input[type="text"],#login-form input[type="password"]{width:100%;border-color:#285C92;padding: 10px 0}
+#login-form input.button{-moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;-webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;box-shadow:inset 0px 1px 0px 0px #54a3f7;background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);background-color:#007dc1;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;border:1px solid #124d77;display:inline-block;cursor:pointer;color:#ffffff;font-family:Arial;font-size:13px;padding: 10px;text-decoration:none;text-shadow:0px 1px 0px #154682;width: 100%}
+#login-form input.button:hover,#login-form input.button:focus{background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);background-color:#0061a7;}
+#login-form input.button:active{position:relative;top:1px;}
+#login-form form table, #login-form form tbody, #login-form form tr, #login-form form td {width:100%; display: block}
+#login-form td.title{width:20%;white-space:nowrap;color:#285c92;text-align:left;padding-right:1em;font-weight: bold}
+#login-form p.formbuttons{margin-bottom:2em;text-align:center}
+#login-form #logo{margin:3px 0 0 20px;border:0}
+#login-form #message{min-height:40px;padding:5px 25px;text-align:center;font-size:1.1em}
+#login-form #message div{display:inline-block;padding-right:0;font-size:12px}
+#bottomline{text-align:center}
+.searchbox{position:relative}
+#quicksearchbar{position:absolute;right:2px;top:2px;width:240px}
+.searchbox input,#quicksearchbar input{width:176px;margin:0;padding:3px 30px 3px 34px;height:18px;border-color:#285c92;font-weight:bold;font-size:11px}
+.searchbox .searchicon,.searchbox #searchmenulink,#quicksearchbar #searchmenulink{position:absolute;top:3px;left:6px}
+.searchbox #searchreset,.searchbox .iconbutton.reset,#quicksearchbar #searchreset{position:absolute;top:3px;right:1px}
+.listsearchbox{padding:4px;background:#c7e3ef;display:none}
+.listsearchbox input{width:100%;height:26px;-moz-box-sizing:border-box;box-sizing:border-box}
+.toolbar .spacer{display:inline-block;height:40px;padding:0}
+.toolbar a.button{text-align:center;color:#285c92;min-width:50px;max-width:120px;height:13px;text-overflow:ellipsis;white-space:nowrap;padding:28px 2px 0 2px;text-shadow:0 1px 1px #eee;box-shadow:none;-webkit-box-shadow:none;background:url(images/buttons.png?v=51d4.15699) -100px 0 no-repeat transparent;border:0;border-radius:0}
+.dropbutton .dropbuttontip:focus,.toolbar a.button:focus{color:#fff;text-shadow:0 1px 1px #666;background-color:rgba(86,155,228,0.7);border-radius:3px}
+.toolbar a.button.disabled{opacity:.4}
+.dropbutton{display:inline-block;position:relative}
+.dropbutton .dropbuttontip{display:block;position:absolute;right:0;top:0;height:41px;width:18px;overflow:hidden;text-indent:-5000px;background:url(images/buttons.png?v=51d4.15699) 0 -1255px no-repeat;cursor:pointer;outline:0}
+.dropbutton .dropbuttontip:focus,.dropbutton .dropbuttontip:hover{background-position:-26px -1255px}
+.dropbutton a.button.disabled+.dropbuttontip{opacity:.5}
+.dropbutton a.button.disabled+.dropbuttontip:hover{background-position:0 -1255px}
+.dropbutton a.button{margin-left:0;padding-left:0;margin-right:0;padding-right:0}
+.toolbar a.button.back{background-position:0 -1216px}
+.toolbar a.button.checkmail{background-position:center -1176px}
+.toolbar a.button.compose{background-position:center -530px}
+.toolbar a.button.reply{background-position:center -570px}
+.toolbar a.button.reply-all{min-width:64px;background-position:0 -610px}
+.toolbar a.button.forward{min-width:64px;background-position:0 -650px}
+.toolbar a.button.delete{background-position:center -690px}
+.toolbar a.button.archive{background-position:center -730px}
+.toolbar a.button.junk{background-position:center -770px}
+.toolbar a.button.print{background-position:center -810px}
+.toolbar a.button.markmessage{background-position:center -1094px}
+.toolbar a.button.move{background-position:center -1971px}
+.toolbar a.button.more{background-position:center -850px}
+.toolbar a.button.attach{background-position:center -890px}
+.toolbar a.button.spellcheck{min-width:64px;background-position:0 -930px}
+.toolbar a.button.spellcheck.selected{background-position:0 -1620px;color:#1978a1}
+.toolbar a.button.insertsig{background-position:center -1135px}
+.toolbar a.button.search{background-position:center -970px}
+.toolbar a.button.import{background-position:center -1012px}
+.toolbar a.button.export{min-width:64px;background-position:0 -1054px}
+.toolbar a.button.send{background-position:center -1660px}
+.toolbar a.button.savedraft{background-position:center -1700px}
+.toolbar a.button.close{background-position:0 -1745px}
+.toolbar a.button.download{background-position:center -1892px}
+.toolbar a.button.responses{background-position:center -1932px}
+a.menuselector{display:inline-block;border:1px solid #285c92;border-radius:4px;text-decoration:none;cursor:pointer;white-space:nowrap}
+a.menuselector .handle{display:inline-block;padding:0 12px 0 6px;height:20px;line-height:19px;text-shadow:0 1px 1px #fff;border-radius:4px}
+a.menuselector::after {content: "\f0d7";padding-right: 5px;}
+a.menuselector:active{text-decoration:none}
+select.decorated{position:relative;z-index:10;opacity:0;height:22px;cursor:pointer;-khtml-appearance:none;-webkit-appearance:none;border:0}
+html.opera select.decorated{opacity:1}
+select.decorated option{background:#fff;padding:4px 6px;}
+a.menuselector:focus,a.menuselector.focus,a.iconbutton:focus,.pagenav a.button:focus{border-color:#569be4;box-shadow:0 0 2px 1px rgba(86,155,288,0.9);-webkit-box-shadow:0 0 2px 1px rgba(71,135,177,0.8);outline:0}
+#quotadisplay{left:6px;height:28px;font-size:16px;font-weight:bold;text-shadow:0 1px 1px #fff}
+table.quota-info{border-spacing:0;border-collapse:collapse;table-layout:fixed;margin:5px}
+table.quota-info td,table.quota-info th{color:white;border:1px solid lightgrey;padding:2px 3px;text-align:center;min-width:80px}
+table.quota-info td.name{text-align:left}
+table.quota-info td.root{font-style:italic}
+.popupmenu,#rcmKSearchpane{display:none;position:absolute;top:32px;left:90px;width:auto;max-height:70%;overflow:-moz-scrollbars-vertical;overflow-y:auto;background:#fff;border:1px solid #999;z-index:240;border-radius:4px;box-shadow:0 2px 6px 0 #333;-webkit-box-shadow:0 2px 6px 0 #333}
+.popupmenu.dropdown{border-radius:0 0 4px 4px;border-top:0}
+ul.toolbarmenu,ul.toolbarmenu ul,#rcmKSearchpane ul{margin:0;padding:0;list-style:none}
+.googie_list td,ul.toolbarmenu li,#rcmKSearchpane ul li{color:#fff;white-space:nowrap;min-width:130px;margin:0;border-top:1px solid #5a5a5a}
+.googie_list tr:first-child td,ul.toolbarmenu>li:first-child,select.decorated option:first-child{border-top:0}
+.googie_list tr:last-child td,ul.toolbarmenu>li:last-child,select.decorated option:last-child{border-bottom:0}
+.googie_list td span,ul.toolbarmenu li a{display:block;color:#999;font-weight: bold;text-decoration:none;min-height:14px;padding:6px 16px 6px 10px}
+.googie_list td span{padding:3px 10px}
+.googie_list td span,ul.toolbarmenu li a.active{color:#285c92;cursor:default}
+.googie_list td.googie_list_onhover,ul.toolbarmenu li a.active:hover,ul.toolbarmenu li a.active:focus,#rcmKSearchpane ul li.selected,select.decorated option:hover,select.decorated option[selected='selected']{background-color:#569be4;outline:0}
+ul.toolbarmenu.iconized li a,ul.toolbarmenu.selectable li a{padding-left:30px}
+ul.toolbarmenu.selectable li a.selected{background:url(images/messages.png?v=3a4f.1461) 4px -27px no-repeat}
+ul.toolbarmenu li label{display:block;color:#333;padding:4px 8px}
+ul.toolbarmenu li.separator label{color:#bbb;font-style:italic}
+ul.toolbarmenu li a.icon{color:#999;font-weight: bold;padding:2px 6px}
+ul.toolbarmenu li span.icon,#rcmKSearchpane ul li i.icon{display:block;min-height:14px;padding:4px;height:17px}
+ul.toolbarmenu li a.active span.icon{color:#285c92;opacity:.99}
+#snippetslist{max-width:200px}
+#snippetslist li a{overflow:hidden;text-overflow:ellipsis}
+#rcmKSearchpane{border-radius:0 0 4px 4px;border-top:0}
+#rcmKSearchpane ul li{text-shadow:0 1px 1px #333;text-decoration:none;min-height:14px;padding:6px 10px 6px 28px;border:0;cursor:default;position:relative}
+#rcmKSearchpane ul li i.icon{opacity:.99;position:absolute;top:4px;left:5px;width:18px;height:18px;padding:0;background-position:-1px -2223px}
+#rcmKSearchpane ul li.group i.icon{background-position:-1px -2247px}
+.popupdialog{display:none;padding:10px}
+.popupdialog .formbuttons{margin:20px 0 4px 0}
+.ui-dialog .prompt input{display:block;margin:8px 0}
+.hint{margin:4px 0;color:#999;text-shadow:0 1px 1px #fff}
+.splitter{user-select:none;-moz-user-select:none;-khtml-user-select:none;position:absolute;background:url(images/splitter.png?v=2724.136) center no-repeat}
+.splitter-h{height:10px;width:100%;cursor:n-resize;cursor:row-resize;background-position:center 0}
+.splitter-v{width:10px;height:100%;cursor:e-resize;cursor:col-resize;background-position:0 center}
+#rcmdraglayer{min-width:260px;width:auto !important;width:260px;padding:6px 8px;background:#444;border:1px solid #555;border-radius:4px;box-shadow:0 2px 6px 0 #333;-webkit-box-shadow:0 2px 6px 0 #333;z-index:250;color:#ccc;white-space:nowrap;opacity:.92;text-shadow:0 1px 1px #333}
+#rcmdraglayer:after{content:"";position:absolute;top:6px;left:-6px;border-style:solid;border-width:6px 6px 6px 0;border-color:transparent #444;display:block;width:0;z-index:251}
+.draglayercopy:before{position:absolute;bottom:-6px;left:-6px;content:" ";width:16px;height:16px;background:url(images/buttons.png?v=51d4.15699) -7px -358px no-repeat;z-index:255}
+.popup label>input{margin-left:10px}
+#folder-selector{z-index:1000}
+#folder-selector li a span{background:url(images/listicons.png?v=1877.13442) 4px -2021px no-repeat;display:block;height:17px;min-height:14px;padding:4px 4px 1px 28px;overflow:hidden;max-width:120px;text-overflow:ellipsis}
+#folder-selector li a.virtual{opacity:.2}
+#folder-selector li a.inbox span{background-position:4px -2049px}
+#folder-selector li a.drafts span{background-position:4px -1388px}
+#folder-selector li a.sent span{background-position:4px -2074px}
+#folder-selector li a.trash span{background-position:4px -1508px}
+#folder-selector li a.junk span{background-position:4px -2100px}
+.folderlist li.mailbox a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.folderlist li.virtual>a{color:#aaa}
+.folderlist li.mailbox div.treetoggle{top:13px;left:19px}
+.folderlist li.mailbox ul li:last-child{border-bottom:0}
+.folderlist li.mailbox ul{list-style:none;margin:0;padding:0;border-top:1px solid #bbd3da}
+.folderlist li.mailbox ul li a{padding-left:52px;background-position:22px -95px}
+.folderlist li.mailbox ul li>a:focus,.folderlist li.mailbox ul li.selected>a{background-position:22px -119px}
+.folderlist li.mailbox ul li div.treetoggle{left:33px;top:14px}
+.folderlist li.mailbox ul ul li.mailbox a{padding-left:68px;background-position:38px -95px}
+.folderlist li.mailbox ul ul li>a:focus,.folderlist li.mailbox ul ul li.selected>a{background-position:38px -119px}
+.folderlist li.mailbox ul ul li div.treetoggle{left:48px}
+.folderlist li.mailbox ul ul ul li.mailbox a{padding-left:84px;background-position:54px -95px}
+.folderlist li.mailbox ul ul ul li>a:focus,.folderlist li.mailbox ul ul ul li.selected>a{background-position:54px -119px}
+.folderlist li.mailbox ul ul ul li div.treetoggle{left:64px}
+.folderlist li.mailbox ul ul ul ul li.mailbox a{padding-left:100px;background-position:70px -95px}
+.folderlist li.mailbox ul ul ul ul li>a:focus,.folderlist li.mailbox ul ul ul ul li.selected>a{background-position:70px -119px}
+.folderlist li.mailbox ul ul ul ul li div.treetoggle{left:80px}
+.folderlist li.mailbox ul ul ul ul ul li{padding-left:16px}
+.folderlist li.mailbox ul ul ul ul ul li div.treetoggle{left:96px}
+.attachmentslist{list-style:none;margin:0;padding:0;overflow:hidden;text-overflow:ellipsis}
+.attachmentslist li{display:block;position:relative;background:url(images/filetypes.png?v=91f3.4626) 0 0 no-repeat;margin-bottom:1px}
+.attachmentslist li.txt,.attachmentslist li.text{background-position:0 -416px}
+.attachmentslist li.pdf{background-position:0 -26px}
+.attachmentslist li.doc,.attachmentslist li.docx,.attachmentslist li.msword{background-position:0 -52px}
+.attachmentslist li.odt{background-position:0 -78px}
+.attachmentslist li.xls,.attachmentslist li.xlsx,.attachmentslist li.msexcel{background-position:0 -104px}
+.attachmentslist li.ods{background-position:0 -130px}
+.attachmentslist li.zip,.attachmentslist li.gz{background-position:0 -156px}
+.attachmentslist li.rar{background-position:0 -182px}
+.attachmentslist li.image{background-position:0 -208px}
+.attachmentslist li.jpg,.attachmentslist li.jpeg{background-position:0 -234px}
+.attachmentslist li.png{background-position:0 -260px}
+.attachmentslist li.m4p{background-position:0 -286px}
+.attachmentslist li.mp3,.attachmentslist li.audio{background-position:0 -312px}
+.attachmentslist li.video{background-position:0 -338px}
+.attachmentslist li.ics,.attachmentslist li.calendar{background-position:0 -364px}
+.attachmentslist li.vcard{background-position:0 -390px}
+.attachmentslist li.sig,.attachmentslist li.pgp-signature,.attachmentslist li.pkcs7-signature{background-position:0 -442px}
+.attachmentslist li.html{background-position:0 -468px}
+.attachmentslist li.eml,.attachmentslist li.rfc822{background-position:0 -494px}
+.attachmentslist li.ppt,.attachmentslist li.pptx,.attachmentslist li.ppsx,.attachmentslist li.vnd.mspowerpoint{background-position:0 -520px}
+.attachmentslist li.odp,.attachmentslist li.otp{background-position:0 -546px}
+.attachmentslist li a,#compose-attachments ul li{display:block;color:#333;font-weight:bold;padding:3px 15px 3px 30px;text-shadow:0 1px 1px #fff;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:20px;outline:0}
+.attachmentslist li a.drop{background:url(images/buttons.png?v=51d4.15699) no-repeat scroll center -1570px;width:14px;height:20px;cursor:pointer;position:absolute;right:0;top:0;padding:0;overflow:hidden;text-indent:-5000px;outline:0}
+.attachmentslist li a:focus,.attachmentslist li a.drop:focus{background-color:rgba(30,150,192,0.5);border-radius:2px}
+#compose-attachments ul li{padding-right:28px}
+.attachmentslist li a:hover{text-decoration:underline}
+.attachmentslist li.uploading{background:url(images/ajaxloader.gif?v=c252.1434) 2px 6px no-repeat}
+.attachmentslist li a.delete,.attachmentslist li a.cancelupload{position:absolute;top:4px;right:0;width:20px;height:18px;padding:0;text-decoration:none;text-indent:-5000px;background-image:url(images/buttons.png?v=51d4.15699);background-position:-6px -338px;background-repeat:no-repeat}
+.attachmentslist li a.cancelupload{background-position:-6px -378px}
+.tabbed.ui-tabs{padding:0;border:0 !important;background:0}
+.ui-dialog .tabbed.ui-tabs{margin:-12px -8px 0 -8px}
+.boxcontent.tabbed.ui-tabs{padding:10px}
+.ui-tabs .tabsbar.ui-tabs-nav{margin-bottom:10px}
+.ui-dialog-content .ui-tabs .tabsbar.ui-tabs-nav{margin-bottom:0}
+.tabsbar .tablink:last-child{background:0}
+.tabsbar .tablink:last-child a{border-right:0}
+.ui-tabs .ui-tabs-nav li.tablink a{background:#eafaff}
+.ui-tabs fieldset.ui-tabs-panel{border:0;padding:0;margin-left:0;background:0}
+.ui-dialog .propform .ui-tabs-panel{display:block;background:#efefef;padding:.5em 1em}
+#image-selector-form.droptarget{background:url(images/filedrop.png?v=ba79.421) center bottom no-repeat}
+.mce-btn-small .mce-ico{display:inline}
+.mce-btn-small i{line-height:16px !important;vertical-align:text-top !important}
+_:not(),_:-moz-handler-blocked,.mozilla .mce-btn-small i{line-height:20px !important}
+.minmodetoggle, a.menuselector:after, .toolbar a.button:before, .dropbutton .dropbuttontip:before, .records-table thead *:before, .records-table thead *:after, .boxpagenav a.icon.firstpage:before, .boxpagenav a.icon.prevpage:before, .boxpagenav a.icon.nextpage:before, .boxpagenav a.icon.lastpage:before, #messagestack div:after, #topnav a.button-skin-options:before, #planner_controls #new:after, #planner_controls #tomorrow:after, #planner_controls #all:after, #planner_controls #help:after, #planner_controls #filter:after, #rss a:after, a.iconbutton, #mailpreviewtoggle, .messagelist tr td span:before, .messagelist tr th span:before, .messagelist tr th a:before, #messagelist .expanded:before, #messagelist .collapsed:before, #mailboxlist .mailbox a:before, a.button, a.iconlink, #subscription-table a:before, #settings-tabs a:before, #sections-table td:before, .boxfooter span:before, .boxfooter a:before, #directorylist .addressbook a:before,#contacts-table td.contact a:before,#contacts-table td.name:before {font-family: FontAwesome;font-weight: normal}
+.headers-table a.rcmaddcontact:before,#full-headers .more-headers:before, #taskbar span.button-inner:before, #topline a.button-logout:before, .moreheaderstoggle span.iconlink:before{font-family: FontAwesome;font-weight: normal}
+#messagetoolbar.toolbar a.button:before, #addressbooktoolbar.toolbar a.button:before, #mailtoolbar.toolbar a.button:before {font-size: 28px}
+.toolbar a.button:before, #calendar .fc-button-inner:before {display: block;font-size: 2.1em;text-align: center;}
+.toolbar a.button, a.iconbutton {background-image: none !important;height: 50px;padding-top: 0}
+.dropbutton .dropbuttontip {background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;font-size: 0;height: auto;padding: 10px 4px;text-decoration: none;text-indent: 0;width: auto}
+.dropbutton .dropbuttontip:before {font-size: 14px;}
+.toolbar a.button.checkmail:before {content: "\f021";}
+.toolbar a.button.compose:before {content: "\f044"}
+.toolbar a.button.reply:before {content: "\f112"}
+.toolbar a.button.reply-all:before {content: "\f122"}
+.toolbar a.button.forward:before {content: "\f064"}
+.toolbar a.button.junk:before {content: "\f1b8"}
+.toolbar a.button.markasjunk2:before {content: "\f1b8"}
+.toolbar a.button.markasjunk2Sel:before {content: "\f1b8"}
+.toolbar a.button.markasnotjunk2:before {content: "\f1b8"}
+.toolbar a.button.delete:before {content: "\f014"}
+.toolbar a.button.markmessage:before {content: "\f02c"}
+.toolbar a.button.more:before {content: "\f141"}
+.toolbar a.button.back:before {content: "\f060"}
+.toolbar a.button.send:before {content: "\f1d8"}
+.toolbar a.button.savedraft:before {content: "\f0c7"}
+.toolbar a.button.spellcheck:before {content: "\f046"}
+.toolbar a.button.attach:before {content: "\f0c6"}
+.toolbar a.button.insertsig:before {content: "\f040"}
+.toolbar a.button.responses:before {content: "\f27b"}
+.toolbar a.button.import:before {content: "\f019"}
+.toolbar a.button.export:before {content: "\f093"}
+.toolbar a.button.print:before {content: "\f02f"}
+.toolbar a.button.search:before {content: "\f002"}
+.toolbar a.button.move:before {content: "\f0ec"}
+.dropbutton .dropbuttontip:before {content: "\f0d7"}
+#mailboxlist .mailbox a:before {margin-right: 10px;}
+#mailboxlist .mailbox.inbox a:before {content: "\f07c"}
+#mailboxlist .mailbox.drafts a:before {content: "\f07c"}
+#mailboxlist .mailbox.sent a:before {content: "\f07c"}
+#mailboxlist .mailbox.junk a:before {content: "\f1b8"}
+#mailboxlist .mailbox.trash a:before {content: "\f1f8"}
+#mailboxlist .mailbox a:before {content: "\f07c"}
+#subscription-table .mailbox a:before {margin-right: 10px;font-size:18px}
+#subscription-table .mailbox.inbox a:before {content: "\f07c"}
+#subscription-table .mailbox.drafts a:before {content: "\f07c"}
+#subscription-table .mailbox.sent a:before {content: "\f07c"}
+#subscription-table .mailbox.junk a:before {content: "\f1b8"}
+#subscription-table .mailbox.trash a:before {content: "\f1f8"}
+#subscription-table .mailbox a:before {content: "\f07c"}
+#mailpreviewtoggle {background-image: none !important}
+#taskbar .minmodetoggle, a.iconbutton, #mailpreviewtoggle, #planner_controls a:after {font-size: 1.6em}
+#mailpreviewtoggle, a.iconbutton, .listmenu, .messagelist thead tr .listmenu, .messagelist thead tr span, .messagelist tr > .flag span, .messagelist tr > .status span, .messagelist tr > .attachment span, .messagelist tr > .priority span {text-align: center;text-indent: 0 !important}
+#mailpreviewtoggle.closed:before {content: "\f151"}
+#mailpreviewtoggle.enabled:before {content: "\f150"}
+#maillistmode:before {content: "\f0c9"}
+#mailthreadmode:before {content: "\f086"}
+#searchmenulink:before {content: "\f002"}
+#searchreset:before {content: "\f057"}
+.records-table tr td.threads div.listmenu:before, .records-table tr th.threads a.listmenu:before {content: "\f078"}
+.records-table thead tr .status span.status:before {content: "\f005"}
+.records-table thead tr .priority span.priority:before {content: "\f06a"}
+.messagelist tr .flag span.flagged:before {content: "\f024"}
+.messagelist tr .attachment span.attachment:before {content: "\f0c6"}
+.messagelist tr .status span.unread:before {content: "\f005"}
+.messagelist tr:hover td.status span:before {color: #bbb !important; content: "\f006"}
+.messagelist tr:hover td.flag span:before {color: #bbb; content: "\f11d"}
+.messagelist tr .priority span.prio1:before {content: "\f0aa"}
+.messagelist tr .priority span.prio2:before {content: "\f01b"}
+.messagelist tr .priority span.prio4:before {content: "\f01a"}
+.messagelist tr .priority span.prio5:before {content: "\f0ab"}
+.messagelist tr td.subject span.msgicon:before, .messagelist tr td.subject span.unreadchildren:before {font-size: 8px;vertical-align: middle;content: "\f10c"}
+a.firstpage span.inner:before {content: "\f049"}
+a.prevpage span.inner:before {content: "\f04a"}
+a.nextpage span.inner:before {content: "\f04e"}
+a.lastpage span.inner:before {content: "\f050"}
+.boxpagenav a.firstpage:before {content: "\f100"}
+.boxpagenav a.prevpage:before {content: "\f104"}
+.boxpagenav a.nextpage:before {content: "\f105"}
+.boxpagenav a.lastpage:before {content: "\f101"}
+.extwin span.icon:before {content: "\f24d"}
+#contacts-table tr.selected a {color: #fff}
+#folderslist a.search:before {content: "\f002"}
+#settings-tabs a:before {margin-right: 10px;font-size:18px}
+#settingstabpreferences a:before {content: "\f109"}
+#settingstabfolders a:before {content: "\f07c"}
+#settingstabidentities a:before {content: "\f007"}
+#settingstabresponses a:before {content: "\f27a"}
+#settingstabpluginpassword a:before {content: "\f023"}
+#sections-table td:before {margin-right: 10px;font-size:18px}
+#sections-table #rcmrowgeneral td:before {content: "\f26c"}
+#sections-table #rcmrowmailbox td:before {content: "\f005"}
+#sections-table #rcmrowmailview td:before {content: "\f0e0"}
+#sections-table #rcmrowcompose td:before {content: "\f044"}
+#sections-table #rcmrowaddressbook td:before {content: "\f02d"}
+#sections-table #rcmrowfolders td:before {content: "\f07b"}
+#sections-table #rcmrowserver td:before {content: "\f233"}
+.boxfooter #mailboxmenulink span.inner:before {content: "\f013";font-size:28px}
+.boxfooter #mailboxmenulink span.inner{letter-spacing:20px; margin-left: 12px}
+.boxfooter  span.countdisplay:before {content: "\f0ae";padding: 5px;font-size:28px}
+.boxfooter span.countdisplay {font-size:16px; vertical-align:top;padding-top:5px}
+.boxfooter .listbutton.add span.inner:before {content: "\f067";letter-spacing:20px;;font-size:28px}
+.boxfooter .listbutton.delete span.inner:before {content: "\f068";letter-spacing:20px;;font-size:28px;margin-left: 12px}
+.boxfooter .listbutton.removegroup span.inner:before {content: "\f127";letter-spacing:20px;;font-size:28px;margin-left: 12px}
+#directorylist-footer .listbutton.groupactions span::before {content: "\f013";letter-spacing:20px;font-size:28px;margin-left: 12px }
+#directorylist .addressbook a:before {content: "\f02d";margin-right: 10px;font-size:18px}
+#contacts-table td.contact a:before {content: "\f007";margin-right: 10px;font-size:18px}
+#contacts-table td.name:before {content: "\f007";margin-right: 10px;font-size:18px}
+#formatcontrols .changeformat.html span.icon:before {content: "\f121";font-size:14px}
+#formatcontrols .changeformat.text span.icon:before {content: "\f036";font-size:14px}
+.headers-table a.rcmaddcontact:before {content: "\f234";font-size:14px}
+.headers-table a.rcmaddcontact img {display: none}
+#full-headers .show-headers:before {content: "\f13a";font-size:14px}
+#full-headers .hide-headers:before {content: "\f13a";font-size:14px}
+#taskbar a.button-mail span.button-inner:before {content: "\f0e0";font-size:20px;margin-right: 5px}
+#taskbar a.button-addressbook span.button-inner:before { content: "\f007";font-size:20px;margin-right: 5px}
+#taskbar a.button-settings span.button-inner:before { content: "\f013";font-size:20px;margin-right: 5px}
+#taskbar a.button-help span.button-inner:before { content: "\f1cd";font-size:20px;margin-right: 5px}
+#taskbar a.button-logout span.button-inner:before { content: "\f011";font-size:20px;margin-right: 5px}
+#taskbar span.button-inner:before { content: "\f0c8";font-size:20px;margin-right: 5px}
+#taskbar .minmodetoggle::before {content: "\f0d8"}
+.minimal #taskbar .minmodetoggle::before {content: "\f0d7"}
+#topline a.button-logout:before { content: "\f011";font-size:14px;margin-right: 5px}
