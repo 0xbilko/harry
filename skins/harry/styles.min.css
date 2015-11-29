@@ -8,7 +8,7 @@ img{border:0}
 .voice{position:absolute;border:0;clip:rect(0 0 0 0);width:1px;height:1px;margin:-1px;padding:0;overflow:hidden}
 html.mozilla select{padding:2px 1px}
 input,textarea,select,button{font-family:inherit;font-size:inherit;vertical-align:middle}
-input[type="text"],input[type="password"],textarea{margin:0;padding:6px 0;border:1px solid #b2b2b2;border-radius:4px;box-shadow:inset 0 0 2px 1px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0 0 2px 1px rgba(0,0,0,0.1)}
+input[type="text"],input[type="password"],textarea{margin:0;padding:6px;border:1px solid #b2b2b2;border-radius:4px;box-shadow:inset 0 0 2px 1px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0 0 2px 1px rgba(0,0,0,0.1)}
 input[type="text"]:focus,input[type="password"]:focus,input.button:focus,textarea:focus{border-color:#569be4;box-shadow:0 0 2px 1px rgba(86,155,288,0.9);-webkit-box-shadow:0 0 2px 1px rgba(86,155,288,0.9);outline:0}
 input[type="text"]:required,input[type="password"]:required{border-color:#569be4}
 input.placeholder,textarea.placeholder{color:#aaa}
@@ -39,7 +39,7 @@ a.button.pressed,a.button:active,input.button:active{}
 a.button span.icon,.pagenav a.button span.inner{display:inline-block;width:16px;height:13px;overflow:hidden;letter-spacing:20px}
 .pagenav .countdisplay{display:inline-block;padding:3px 1em 0 1em;text-shadow:0 1px 1px #fff;min-width:16em}
 .pagenavbuttons{position:relative;}
-a.iconbutton{display:inline-block;width:20px;height:18px;text-decoration:none;text-indent:-5000px;background:url(images/buttons.png?v=51d4.15699) -1000px 0 no-repeat}
+a.iconbutton{display:inline-block;width:20px;height:18px;text-decoration:none;text-indent:-5000px}
 a.iconbutton.disabled{opacity:.4;cursor:default}
 a.iconbutton.searchicon,a.iconbutton.searchoptions{width:17px;overflow: hidden;background-position:-2px -317px}
 a.iconbutton.reset{width:16px;overflow: hidden;height: 18px}
@@ -50,7 +50,7 @@ a.iconbutton.remove{background-position:-7px -379px}
 a.iconbutton.cancel{background-position:-7px -398px}
 a.iconbutton.edit{background-position:-7px -418px}
 a.iconbutton.upload{background-position:-6px -438px}
-a.iconlink{display:inline-block;text-decoration:none;white-space:nowrap;padding:2px 8px 2px 20px;background:url(images/buttons.png?v=51d4.15699) -1000px 0 no-repeat}
+a.iconlink{display:inline-block;text-decoration:none;white-space:nowrap;padding:2px 8px 2px 20px}
 a.iconlink:hover{text-decoration:underline}
 a.iconlink.delete{background-position:-7px -337px}
 a.iconlink.add:before {font-size: 14px;padding-right: 5px;text-decoration:none;content: "\f055"}
@@ -60,7 +60,7 @@ a.iconlink.cancel{background-position:-7px -397px}
 a.iconlink.edit:before {font-size: 14px;padding-right: 5px;text-decoration:none;content: "\f040"}
 a.iconlink.edit:hover:before {display: inline-block;text-decoration:none}
 a.iconlink.upload{background-position:-6px -437px}
-#message div.loading,#message div.uploading,#message div.warning,#message div.error,#message div.notice,#message div.confirmation,#message-objects div.notice{color:#555;font-weight:bold;padding:6px 30px 6px 25px;display:inline-block;white-space:nowrap;background:url(images/messages.png?v=3a4f.1461) 0 5px no-repeat;cursor:default}
+#message div.loading,#message div.uploading,#message div.warning,#message div.error,#message div.notice,#message div.confirmation,#message-objects div.notice{color:#555;font-weight:bold;padding:6px 30px 6px 25px;display:inline-block;white-space:nowrap;cursor:default}
 #message div.warning{color:#960;background-position:0 -86px}
 #message div.error{color:#cf2734;background-position:0 -55px}
 #message div.confirmation{color:#093;background-position:0 -25px}
@@ -148,7 +148,7 @@ a.iconlink.upload{background-position:-6px -437px}
 .boxtitle,.uibox .listing thead th,.uibox .listing thead td{font-size:12px;font-weight:bold;padding:7px 8px 6px 8px;line-height:20px;margin:0;text-shadow:0 1px 1px #fff;border-bottom:1px solid #bbd3da;white-space:nowrap}
 .uibox .listing thead th,.uibox .listing thead td{padding-bottom:8px;height:auto}
 .uibox .boxtitle,.uibox .listing thead th,.uibox .listing thead td{background:#e0f7ff;color:#285c92;border-radius:4px 4px 0 0}
-.listbox .listitem,.listbox .tablink,.listing tbody td,.listing li{display:block;border-top:1px solid #fff;border-bottom:1px solid #bbd3da;cursor:default;font-weight:normal}
+.listbox .listitem,.listbox .tablink,.listing tbody td,.listing li{display:block;border-bottom:1px solid #bbd3da;cursor:default;font-weight:normal}
 .listbox .listitem a,.listbox .listitem span,.listbox .tablink a,.listing tbody td,.listing li a{display:block;color:#285c92;text-decoration:none;cursor:default;padding:4px 8px;line-height:17px;height:17px;white-space:nowrap}
 .listing tbody td{display:table-cell;min-height:14px;outline:0}
 .listing tbody td a{text-decoration:none}
@@ -157,7 +157,7 @@ a.iconlink.upload{background-position:-6px -437px}
 .listing.focus tbody tr.focused>td:first-child{border-left:2px solid #739da8}
 .listbox .listitem.selected,.listbox .tablink.selected,.listbox .listitem.selected>a,.listbox .tablink.selected>a,.listing tbody tr.selected td,.listing li.selected,.listing li.selected>a{color:#ffffff;font-weight:bold;background-color:#569BE4;}
 ul.listing{display:block;list-style:none;margin:0;padding:0}
-ul.listing li{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+ul.listing li{text-overflow:ellipsis;white-space:nowrap}
 ul.listing li ul{border-top:1px solid #bbd3da}
 ul.listing li.droptarget,table.listing tr.droptarget td{background-color:#e8e798}
 table.listing,table.layout{border:0;width:100%;border-spacing:0}
@@ -172,7 +172,7 @@ ul.treelist ul ul li a{padding-left:54px}
 ul.treelist.iconized ul li a{padding-left:62px}
 ul.treelist.iconized ul ul li a{padding-left:88px}
 ul.treelist.iconized ul ul ul li a{padding-left:114px}
-ul.treelist li div.treetoggle{position:absolute;top:7px;left:4px;width:13px;height:13px;background:url(images/listicons.png?v=1877.13442) -3px -144px no-repeat;cursor:pointer}
+ul.treelist li div.treetoggle{position:absolute;top:7px;left:4px;width:13px;height:13px;cursor:pointer}
 ul.treelist li ul li div.treetoggle{left:22px}
 ul.treelist.iconized li div.treetoggle{top:13px;left:19px}
 ul.treelist.iconized ul li div.treetoggle{left:45px}
@@ -222,7 +222,7 @@ body.iframe.fullheight{margin:0}
 .contentbox .boxtitle,body.iframe .boxtitle{color:#285c92;background:#e0f7ff;border-bottom:1px solid #ccc}
 body.iframe .boxtitle{position:fixed;top:0;left:0;width:100%;z-index:100}
 body.iframe .footerleft.floating,#composeview-bottom .formbuttons.floating{position:fixed;left:0;bottom:0;width:100%;z-index:110;background:#fff;padding-top:8px;padding-bottom:12px}
-body.iframe .footerleft.floating:before,#composeview-bottom .formbuttons.floating:before{content:" ";position:absolute;top:-6px;left:0;width:100%;height:6px;background:url(images/overflowshadow.png?v=71ba.250) top center no-repeat}
+body.iframe .footerleft.floating:before,#composeview-bottom .formbuttons.floating:before{content:" ";position:absolute;top:-6px;left:0;width:100%;height:6px}
 .boxcontent{padding:10px}
 .contentbox .scroller{position:absolute;top:34px;left:0;right:0;bottom:0;overflow:auto}
 .iframebox{position:absolute;top:0;left:0;right:0;bottom:0}
@@ -247,7 +247,7 @@ ul.proplist li{width:auto}
 #login-form .box-inner form {padding: 0 25px}
 #login-form .noscriptwarning{margin:0 auto;width:430px;color:#cf2734;font-size:110%;font-weight:bold}
 #login-form td.input{width:100%;padding:8px 0}
-#login-form input[type="text"],#login-form input[type="password"]{width:100%;border-color:#285C92;padding: 10px 0}
+#login-form input[type="text"],#login-form input[type="password"]{width:100%;border-color:#285C92;padding: 10px 5px; box-sizing: border-box}
 #login-form input.button{-moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;-webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;box-shadow:inset 0px 1px 0px 0px #54a3f7;background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);background-color:#007dc1;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;border:1px solid #124d77;display:inline-block;cursor:pointer;color:#ffffff;font-family:Arial;font-size:13px;padding: 10px;text-decoration:none;text-shadow:0px 1px 0px #154682;width: 100%}
 #login-form input.button:hover,#login-form input.button:focus{background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0061a7), color-stop(1, #007dc1));background:-moz-linear-gradient(top, #0061a7 5%, #007dc1 100%);background:-webkit-linear-gradient(top, #0061a7 5%, #007dc1 100%);background:-o-linear-gradient(top, #0061a7 5%, #007dc1 100%);background:-ms-linear-gradient(top, #0061a7 5%, #007dc1 100%);background:linear-gradient(to bottom, #0061a7 5%, #007dc1 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#0061a7', endColorstr='#007dc1',GradientType=0);background-color:#0061a7;}
 #login-form input.button:active{position:relative;top:1px;}
@@ -266,12 +266,11 @@ ul.proplist li{width:auto}
 .listsearchbox{padding:4px;background:#c7e3ef;display:none}
 .listsearchbox input{width:100%;height:26px;-moz-box-sizing:border-box;box-sizing:border-box}
 .toolbar .spacer{display:inline-block;height:40px;padding:0}
-.toolbar a.button{text-align:center;color:#285c92;min-width:50px;max-width:120px;height:13px;text-overflow:ellipsis;white-space:nowrap;padding:28px 2px 0 2px;text-shadow:0 1px 1px #eee;box-shadow:none;-webkit-box-shadow:none;background:url(images/buttons.png?v=51d4.15699) -100px 0 no-repeat transparent;border:0;border-radius:0}
+.toolbar a.button{text-align:center;color:#285c92;min-width:50px;max-width:120px;height:13px;text-overflow:ellipsis;white-space:nowrap;padding:28px 2px 0 2px;text-shadow:0 1px 1px #eee;box-shadow:none;-webkit-box-shadow:none;border:0;border-radius:0}
 .dropbutton .dropbuttontip:focus,.toolbar a.button:focus{color:#fff;text-shadow:0 1px 1px #666;background-color:rgba(86,155,228,0.7);border-radius:3px}
 .toolbar a.button.disabled{opacity:.4}
 .dropbutton{display:inline-block;position:relative}
-.dropbutton .dropbuttontip{display:block;position:absolute;right:0;top:0;height:41px;width:18px;overflow:hidden;text-indent:-5000px;background:url(images/buttons.png?v=51d4.15699) 0 -1255px no-repeat;cursor:pointer;outline:0}
-.dropbutton .dropbuttontip:focus,.dropbutton .dropbuttontip:hover{background-position:-26px -1255px}
+.dropbutton .dropbuttontip{display:block;position:absolute;right:0;top:0;height:41px;width:18px;overflow:hidden;text-indent:-5000px;cursor:pointer;outline:0}
 .dropbutton a.button.disabled+.dropbuttontip{opacity:.5}
 .dropbutton a.button.disabled+.dropbuttontip:hover{background-position:0 -1255px}
 .dropbutton a.button{margin-left:0;padding-left:0;margin-right:0;padding-right:0}
@@ -324,7 +323,6 @@ ul.toolbarmenu,ul.toolbarmenu ul,#rcmKSearchpane ul{margin:0;padding:0;list-styl
 .googie_list td span,ul.toolbarmenu li a.active{color:#285c92;cursor:default}
 .googie_list td.googie_list_onhover,ul.toolbarmenu li a.active:hover,ul.toolbarmenu li a.active:focus,#rcmKSearchpane ul li.selected,select.decorated option:hover,select.decorated option[selected='selected']{background-color:#569be4;outline:0}
 ul.toolbarmenu.iconized li a,ul.toolbarmenu.selectable li a{padding-left:30px}
-ul.toolbarmenu.selectable li a.selected{background:url(images/messages.png?v=3a4f.1461) 4px -27px no-repeat}
 ul.toolbarmenu li label{display:block;color:#333;padding:4px 8px}
 ul.toolbarmenu li.separator label{color:#bbb;font-style:italic}
 ul.toolbarmenu li a.icon{color:#999;font-weight: bold;padding:2px 6px}
@@ -345,10 +343,10 @@ ul.toolbarmenu li a.active span.icon{color:#285c92;opacity:.99}
 .splitter-v{width:10px;height:100%;cursor:e-resize;cursor:col-resize;background-position:0 center}
 #rcmdraglayer{min-width:260px;width:auto !important;width:260px;padding:6px 8px;background:#444;border:1px solid #555;border-radius:4px;box-shadow:0 2px 6px 0 #333;-webkit-box-shadow:0 2px 6px 0 #333;z-index:250;color:#ccc;white-space:nowrap;opacity:.92;text-shadow:0 1px 1px #333}
 #rcmdraglayer:after{content:"";position:absolute;top:6px;left:-6px;border-style:solid;border-width:6px 6px 6px 0;border-color:transparent #444;display:block;width:0;z-index:251}
-.draglayercopy:before{position:absolute;bottom:-6px;left:-6px;content:" ";width:16px;height:16px;background:url(images/buttons.png?v=51d4.15699) -7px -358px no-repeat;z-index:255}
+.draglayercopy:before{position:absolute;bottom:-6px;left:-6px;content:" ";width:16px;height:16px;z-index:255}
 .popup label>input{margin-left:10px}
 #folder-selector{z-index:1000}
-#folder-selector li a span{background:url(images/listicons.png?v=1877.13442) 4px -2021px no-repeat;display:block;height:17px;min-height:14px;padding:4px 4px 1px 28px;overflow:hidden;max-width:120px;text-overflow:ellipsis}
+#folder-selector li a span{display:block;height:17px;min-height:14px;padding:4px 4px 1px 28px;overflow:hidden;max-width:120px;text-overflow:ellipsis}
 #folder-selector li a.virtual{opacity:.2}
 #folder-selector li a.inbox span{background-position:4px -2049px}
 #folder-selector li a.drafts span{background-position:4px -1388px}
@@ -398,12 +396,13 @@ ul.toolbarmenu li a.active span.icon{color:#285c92;opacity:.99}
 .attachmentslist li.ppt,.attachmentslist li.pptx,.attachmentslist li.ppsx,.attachmentslist li.vnd.mspowerpoint{background-position:0 -520px}
 .attachmentslist li.odp,.attachmentslist li.otp{background-position:0 -546px}
 .attachmentslist li a,#compose-attachments ul li{display:block;color:#333;font-weight:bold;padding:3px 15px 3px 30px;text-shadow:0 1px 1px #fff;text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:20px;outline:0}
-.attachmentslist li a.drop{background:url(images/buttons.png?v=51d4.15699) no-repeat scroll center -1570px;width:14px;height:20px;cursor:pointer;position:absolute;right:0;top:0;padding:0;overflow:hidden;text-indent:-5000px;outline:0}
+.attachmentslist li a.drop{;width:14px;height:20px;cursor:pointer;position:absolute;right:0;top:0;padding:0;overflow:hidden;text-indent:-5000px;outline:0}
 .attachmentslist li a:focus,.attachmentslist li a.drop:focus{background-color:rgba(30,150,192,0.5);border-radius:2px}
 #compose-attachments ul li{padding-right:28px}
 .attachmentslist li a:hover{text-decoration:underline}
 .attachmentslist li.uploading{background:url(images/ajaxloader.gif?v=c252.1434) 2px 6px no-repeat}
-.attachmentslist li a.delete,.attachmentslist li a.cancelupload{position:absolute;top:4px;right:0;width:20px;height:18px;padding:0;text-decoration:none;text-indent:-5000px;background-image:url(images/buttons.png?v=51d4.15699);background-position:-6px -338px;background-repeat:no-repeat}
+.attachmentslist li a.delete,.attachmentslist li a.cancelupload{position:absolute;top:4px;right:0;width:20px;height:18px;padding:0;text-decoration:none}
+.attachmentslist li a.delete:after,.attachmentslist li a.cancelupload:after{content: "\f014";font-size:14px}
 .attachmentslist li a.cancelupload{background-position:-6px -378px}
 .tabbed.ui-tabs{padding:0;border:0 !important;background:0}
 .ui-dialog .tabbed.ui-tabs{margin:-12px -8px 0 -8px}
@@ -420,7 +419,7 @@ ul.toolbarmenu li a.active span.icon{color:#285c92;opacity:.99}
 .mce-btn-small i{line-height:16px !important;vertical-align:text-top !important}
 _:not(),_:-moz-handler-blocked,.mozilla .mce-btn-small i{line-height:20px !important}
 .minmodetoggle, a.menuselector:after, .toolbar a.button:before, .dropbutton .dropbuttontip:before, .records-table thead *:before, .records-table thead *:after, .boxpagenav a.icon.firstpage:before, .boxpagenav a.icon.prevpage:before, .boxpagenav a.icon.nextpage:before, .boxpagenav a.icon.lastpage:before, #messagestack div:after, #topnav a.button-skin-options:before, #planner_controls #new:after, #planner_controls #tomorrow:after, #planner_controls #all:after, #planner_controls #help:after, #planner_controls #filter:after, #rss a:after, a.iconbutton, #mailpreviewtoggle, .messagelist tr td span:before, .messagelist tr th span:before, .messagelist tr th a:before, #messagelist .expanded:before, #messagelist .collapsed:before, #mailboxlist .mailbox a:before, a.button, a.iconlink, #subscription-table a:before, #settings-tabs a:before, #sections-table td:before, .boxfooter span:before, .boxfooter a:before, #directorylist .addressbook a:before,#contacts-table td.contact a:before,#contacts-table td.name:before {font-family: FontAwesome;font-weight: normal}
-.headers-table a.rcmaddcontact:before,#full-headers .more-headers:before, #taskbar span.button-inner:before, #topline a.button-logout:before, .moreheaderstoggle span.iconlink:before{font-family: FontAwesome;font-weight: normal}
+.headers-table a.rcmaddcontact:before,#full-headers .more-headers:before, #taskbar span.button-inner:before, #topline a.button-logout:before, .moreheaderstoggle span.iconlink:before, .attachmentslist li a.delete:after,.attachmentslist li a.cancelupload:after{font-family: FontAwesome;font-weight: normal}
 #messagetoolbar.toolbar a.button:before, #addressbooktoolbar.toolbar a.button:before, #mailtoolbar.toolbar a.button:before {font-size: 28px}
 .toolbar a.button:before, #calendar .fc-button-inner:before {display: block;font-size: 2.1em;text-align: center;}
 .toolbar a.button, a.iconbutton {background-image: none !important;height: 50px;padding-top: 0}
