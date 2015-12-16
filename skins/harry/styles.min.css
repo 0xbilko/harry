@@ -149,7 +149,7 @@ a.iconlink.upload{background-position:-6px -437px}
 .uibox .listing thead th,.uibox .listing thead td{padding-bottom:8px;height:auto}
 .uibox .boxtitle,.uibox .listing thead th,.uibox .listing thead td{background:#e0f7ff;color:#285c92;border-radius:4px 4px 0 0}
 .listbox .listitem,.listbox .tablink,.listing tbody td,.listing li{display:block;border-bottom:1px solid #bbd3da;cursor:default;font-weight:normal}
-.listbox .listitem a,.listbox .listitem span,.listbox .tablink a,.listing tbody td,.listing li a{display:block;color:#285c92;text-decoration:none;cursor:default;padding:4px 8px;line-height:17px;height:17px;white-space:nowrap}
+.listbox .listitem a,.listbox .listitem span,.listbox .tablink a,.listing tbody td,.listing li a{display:block;color:#285c92;text-decoration:none;cursor:default;padding:4px 8px 4px 20px;line-height:17px;height:17px;white-space:nowrap}
 .listing tbody td{display:table-cell;min-height:14px;outline:0}
 .listing tbody td a{text-decoration:none}
 .webkit .listing tbody td{height:14px}
@@ -172,14 +172,13 @@ ul.treelist ul ul li a{padding-left:54px}
 ul.treelist.iconized ul li a{padding-left:62px}
 ul.treelist.iconized ul ul li a{padding-left:88px}
 ul.treelist.iconized ul ul ul li a{padding-left:114px}
-ul.treelist li div.treetoggle{position:absolute;top:7px;left:4px;width:13px;height:13px;cursor:pointer}
+ul.treelist li div.treetoggle{position:absolute;top:5px;left:6px;width:13px;height:13px;cursor:pointer}
 ul.treelist li ul li div.treetoggle{left:22px}
 ul.treelist.iconized li div.treetoggle{top:13px;left:19px}
 ul.treelist.iconized ul li div.treetoggle{left:45px}
 ul.treelist.iconized ul ul li div.treetoggle{left:71px}
-ul.treelist li div.treetoggle.expanded{background-position:-3px -168px}
-ul.treelist li.selected>div.collapsed{background-position:-23px -144px}
-ul.treelist li.selected>div.expanded{background-position:-23px -168px}
+ul.treelist li div.treetoggle.expanded:before{content: "\f147";}
+ul.treelist li div.treetoggle.collapsed:before{content: "\f196";}
 .listbox .boxfooter{position:absolute;bottom:0;left:0;width:100%;height:42px;border-top:1px solid #ccdde4;background:#e0f7ff;box-shadow:inset 0 1px 0 0 #fff;-webkit-box-shadow:inset 0 1px 0 0 #fff;white-space:nowrap;overflow:hidden}
 .uibox .boxfooter{border-radius:0 0 4px 4px}
 .boxfooter .listbutton{display:inline-block;text-decoration:none;width:48px;border-right:1px solid #fff;background:#e0f7ff;padding:3px 0;margin-top:1px}
@@ -355,10 +354,9 @@ ul.toolbarmenu li a.active span.icon{color:#285c92;opacity:.99}
 #folder-selector li a.junk span{background-position:4px -2100px}
 .folderlist li.mailbox a{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .folderlist li.virtual>a{color:#aaa}
-.folderlist li.mailbox div.treetoggle{top:13px;left:19px}
 .folderlist li.mailbox ul li:last-child{border-bottom:0}
 .folderlist li.mailbox ul{list-style:none;margin:0;padding:0;border-top:1px solid #bbd3da}
-.folderlist li.mailbox ul li a{padding-left:52px;background-position:22px -95px}
+.folderlist li.mailbox ul li a{padding-left:35px}
 .folderlist li.mailbox ul li>a:focus,.folderlist li.mailbox ul li.selected>a{background-position:22px -119px}
 .folderlist li.mailbox ul li div.treetoggle{left:33px;top:14px}
 .folderlist li.mailbox ul ul li.mailbox a{padding-left:68px;background-position:38px -95px}
@@ -419,7 +417,7 @@ ul.toolbarmenu li a.active span.icon{color:#285c92;opacity:.99}
 .mce-btn-small i{line-height:16px !important;vertical-align:text-top !important}
 _:not(),_:-moz-handler-blocked,.mozilla .mce-btn-small i{line-height:20px !important}
 .minmodetoggle, a.menuselector:after, .toolbar a.button:before, .dropbutton .dropbuttontip:before, .records-table thead *:before, .records-table thead *:after, .boxpagenav a.icon.firstpage:before, .boxpagenav a.icon.prevpage:before, .boxpagenav a.icon.nextpage:before, .boxpagenav a.icon.lastpage:before, #messagestack div:after, #topnav a.button-skin-options:before, #planner_controls #new:after, #planner_controls #tomorrow:after, #planner_controls #all:after, #planner_controls #help:after, #planner_controls #filter:after, #rss a:after, a.iconbutton, #mailpreviewtoggle, .messagelist tr td span:before, .messagelist tr th span:before, .messagelist tr th a:before, #messagelist .expanded:before, #messagelist .collapsed:before, #mailboxlist .mailbox a:before, a.button, a.iconlink, #subscription-table a:before, #settings-tabs a:before, #sections-table td:before, .boxfooter span:before, .boxfooter a:before, #directorylist .addressbook a:before,#contacts-table td.contact a:before,#contacts-table td.name:before {font-family: FontAwesome;font-weight: normal}
-.headers-table a.rcmaddcontact:before,#full-headers .more-headers:before, #taskbar span.button-inner:before, #topline a.button-logout:before, .moreheaderstoggle span.iconlink:before, .attachmentslist li a.delete:after,.attachmentslist li a.cancelupload:after{font-family: FontAwesome;font-weight: normal}
+.headers-table a.rcmaddcontact:before,#full-headers .more-headers:before, #taskbar span.button-inner:before, #topline a.button-logout:before, .moreheaderstoggle span.iconlink:before, .attachmentslist li a.delete:after,.attachmentslist li a.cancelupload:after, ul.treelist li div.treetoggle:before{font-family: FontAwesome;font-weight: normal}
 #messagetoolbar.toolbar a.button:before, #addressbooktoolbar.toolbar a.button:before, #mailtoolbar.toolbar a.button:before {font-size: 28px}
 .toolbar a.button:before, #calendar .fc-button-inner:before {display: block;font-size: 2.1em;text-align: center;}
 .toolbar a.button, a.iconbutton {background-image: none !important;height: 50px;padding-top: 0}
