@@ -525,7 +525,7 @@ a.lastpage span.inner:before {content: "\f050"}
 .headers-table a.rcmaddcontact:before {content: "\f234";font-size:14px}
 .headers-table a.rcmaddcontact img {display: none}
 #full-headers .show-headers:before {content: "\f13a";font-size:14px}
-#full-headers .hide-headers:before {content: "\f13a";font-size:14px}
+#full-headers .hide-headers:before {content: "\f139";font-size:14px}
 #taskbar a.button-mail span.button-inner:before {content: "\f0e0";font-size:20px;margin-right: 5px}
 #taskbar a.button-addressbook span.button-inner:before { content: "\f007";font-size:20px;margin-right: 5px}
 #taskbar a.button-settings span.button-inner:before { content: "\f013";font-size:20px;margin-right: 5px}
