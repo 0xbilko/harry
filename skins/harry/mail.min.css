@@ -45,7 +45,7 @@ table.messagelist.fixedcopy{z-index:2}
 .messagelist tr>.date{width:155px}
 .messagelist tr>.folder{width:135px}
 .messagelist tr>.hidden{display:none}
-.messagelist tr.thread.expanded td{background-color:#ededed}
+.messagelist tr.thread.expanded td{background-color:#eafaff}
 .messagelist tr.unread{font-weight:bold}
 .messagelist tr.flagged th,.messagelist tr.flagged td,.messagelist tr.flagged td a{color:#f30}
 .messagelist thead tr th.sortedASC a,.messagelist thead tr th.sortedDESC a{color:#004458;text-decoration:underline;}
