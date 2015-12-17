@@ -48,7 +48,7 @@ table.messagelist.fixedcopy{z-index:2}
 .messagelist tr.thread.expanded td{background-color:#ededed}
 .messagelist tr.unread{font-weight:bold}
 .messagelist tr.flagged th,.messagelist tr.flagged td,.messagelist tr.flagged td a{color:#f30}
-.messagelist thead tr th.sortedASC a,.messagelist thead tr th.sortedDESC a{color:#004458;text-decoration:underline;background-image:url(images/listicons.png?v=1877.13442);background-repeat:no-repeat;background-position:right -912px}
+.messagelist thead tr th.sortedASC a,.messagelist thead tr th.sortedDESC a{color:#004458;text-decoration:underline;}
 .messagelist thead tr th.sortedASC a{background-position:right -944px}
 .messagelist td img{vertical-align:middle;display:inline-block}
 .messagelist tbody td a{color:#333;text-decoration:none;white-space:nowrap;cursor:default}
@@ -56,13 +56,15 @@ table.messagelist.fixedcopy{z-index:2}
 .messagelist tr>.flag span,.messagelist tr>.status span,.messagelist tr>.attachment span,.messagelist tr>.priority span{display:block;width:20px;text-indent:-5000px;overflow:hidden}
 .messagelist tr td div.collapsed,.messagelist tr td div.expanded,.messagelist tr>.threads .listmenu,.messagelist tr>.attachment span.attachment,.messagelist tr>.attachment span.report,.messagelist tr>.priority span.priority,.messagelist tr>.priority span.prio1,.messagelist tr>.priority span.prio2,.messagelist tr>.priority span.prio3,.messagelist tr>.priority span.prio4,.messagelist tr>.priority span.prio5,.messagelist tr>.flag span.flagged,.messagelist tr>.flag span.unflagged,.messagelist tr>.flag span.unflagged:hover,.messagelist tr>.status span.status,.messagelist tr>.status span.msgicon,.messagelist tr>.status span.deleted,.messagelist tr>.status span.unread,.messagelist tr>.status span.unreadchildren,.messagelist tr>.subject span.msgicon,.messagelist tr>.subject span.deleted,.messagelist tr>.subject span.unread,.messagelist tr>.subject span.replied,.messagelist tr>.subject span.forwarded,.messagelist tr>.subject span.unreadchildren{display:inline-block;vertical-align:middle;height:18px;width:16px;padding:0;font-size: 14px;margin: -5px 0 0 4px;letter-spacing: 20px;}
 .messagelist tr td.subject span.msgicon,.messagelist tr td.subject span.unreadchildren{margin:0 1px 0 0;width:24px}
-.messagelist tr td.subject span.replied{background-position:0 -1076px}
+.messagelist tr td.subject span.replied:before{content: "\f112"; font-size: 11px}
 .messagelist tr td.subject span.forwarded{background-position:0 -1096px}
 .messagelist tr td.subject span.replied.forwarded{background-position:0 -1116px}
 .messagelist tr td.status span.msgicon,.messagelist tr td.flag span.unflagged,.messagelist tr td.status span.unreadchildren{background-position:0 1056px}
 .messagelist tr td.status span.deleted,.messagelist tr:hover td.status span.deleted,.messagelist tr td.subject span.deleted{background-position:-21px -1096px}
-.messagelist tr td div.collapsed{background-position:0 -1137px;cursor:pointer}
-.messagelist tr td div.expanded{background-position:0 -1157px;cursor:pointer}
+.messagelist tr td div.collapsed{cursor:pointer}
+.messagelist tr td div.collapsed:before{content: "\f150"}
+.messagelist tr td div.expanded{cursor:pointer}
+.messagelist tr td div.expanded:before{content: "\f152"}
 .messagelist tr th.threads .listmenu{cursor:pointer;width:15px;height:21px;overflow:hidden;text-indent:-5000px;padding: 2px 5px 0;font-size: 16px}
 .messagelist tr th.threads .listmenu:focus{background-color:rgba(73,180,210,0.7);outline:0}
 .messagelist thead tr th.subject,.messagelist tbody tr td.subject{width:99%;white-space:nowrap}
