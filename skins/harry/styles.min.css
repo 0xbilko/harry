@@ -209,8 +209,8 @@ table.records-table{display:table;width:100%;table-layout:fixed;border-spacing:0
 .records-table tbody td{padding:2px 7px;border-bottom:1px solid #ddd;border-left:1px dotted #bbd3da;white-space:nowrap;cursor:default;overflow:hidden;text-overflow:ellipsis;background-color:#fff;outline:0}
 .records-table thead tr th:first-child,.records-table thead tr td:first-child,.records-table tbody tr td:first-child{border-left:2px solid transparent;padding-left:4px}
 .records-table.focus tbody tr.focused>td:first-child{border-left:2px solid #49b3d2}
-.records-table tr.selected td{color:#fff !important;background:#569be4}
-.records-table.focus tr.selected td{background:#569be4}
+.records-table tr.selected td{color:#fff !important;background:#569be4 !important}
+.records-table.focus tr.selected td{background:#569be4 !important}
 .records-table tr.selected td a,.records-table tr.selected td span{color:#fff}
 .records-table tr.deleted td,.records-table tr.deleted td a{color:#ccc !important}
 #aboutframe{width:97%;height:100%;border:0;padding:0}
