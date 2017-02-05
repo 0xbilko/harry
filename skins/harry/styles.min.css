@@ -433,6 +433,7 @@ _:not(),_:-moz-handler-blocked,.mozilla .mce-btn-small i{line-height:20px !impor
 .toolbar a.button.markasjunk2Sel:before {content: "\f1b8"}
 .toolbar a.button.markasnotjunk2:before {content: "\f1b8"}
 .toolbar a.button.delete:before {content: "\f014"}
+.toolbar a.button.archive:before {content: "\f187"}
 .toolbar a.button.markmessage:before {content: "\f02c"}
 .toolbar a.button.more:before {content: "\f141"}
 .toolbar a.button.back:before, .toolbar a.button.close:before {content: "\f060"}
