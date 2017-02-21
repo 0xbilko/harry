@@ -502,6 +502,8 @@ a.lastpage span.inner:before {content: "\f050"}
 #settingstabidentities a:before {content: "\f007"}
 #settingstabresponses a:before {content: "\f27a"}
 #settingstabpluginpassword a:before {content: "\f023"}
+#settingstabpluginmanagesieve a:before {content: "\f0b0"}
+#settingstabpluginvacation_sieve a:before {content: "\f122"}
 #sections-table td:before {margin-right: 10px;font-size:18px}
 #sections-table #rcmrowgeneral td:before {content: "\f26c"}
 #sections-table #rcmrowmailbox td:before {content: "\f005"}
