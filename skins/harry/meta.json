@@ -1,6 +1,7 @@
 {
-	"name": "Harry",
-	"author": "BELIY / https://github.com/beliys/Harry / version 0.1",
-	"license": "Creative Commons Attribution-ShareAlike",
-	"license-url": "http://creativecommons.org/licenses/by-sa/3.0/"
+    "extends": "larry",
+    "name": "Harry",
+    "author": "beliys / https://github.com/beliys/Harry / version 0.2.1",
+    "license": "Creative Commons Attribution-ShareAlike",
+    "license-url": "http://creativecommons.org/licenses/by-sa/3.0/"
 }

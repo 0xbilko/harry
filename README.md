@@ -10,7 +10,6 @@ Instruction for install:
 ```bash
 git clone https://github.com/beliys/harry /tmp/harry
 cp -rf /tmp/harry/skins/harry /var/www/html/roundcube/skins/harry
-cp -rf /tmp/harry/plugins/* /var/www/html/roundcube/plugins
 chown -R webapps:webapps /var/www/html/roundcube
 rm -rf /tmp/harry
 ```
@@ -24,11 +23,8 @@ Instruction for install on directadmin:
 ```bash
 git clone https://github.com/beliys/harry /tmp/harry
 cp -rf /tmp/harry/skins/harry /var/www/html/roundcube/skins/harry
-cp -rf /tmp/harry/plugins/* /var/www/html/roundcube/plugins
 chown -R webapps:webapps /var/www/html/roundcube
-mkdir -p /usr/local/directadmin/custombuild/custom/roundcube/plugins
 mkdir -p /usr/local/directadmin/custombuild/custom/roundcube/skins
 cp -rf /tmp/harry/skins/harry /usr/local/directadmin/custombuild/custom/roundcube/skins/harry
-cp -rf /tmp/harry/plugins/* /usr/local/directadmin/custombuild/custom/roundcube/plugins
 rm -rf /tmp/harry
 ```
