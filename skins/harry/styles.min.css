@@ -8,7 +8,7 @@ input.button:active{position:relative;top:1px;}
 input.button,.formbuttons input.button{-moz-box-shadow:inset 0px 1px 0px 0px #54a3f7;-webkit-box-shadow:inset 0px 1px 0px 0px #54a3f7;	box-shadow:inset 0px 1px 0px 0px #54a3f7;background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #007dc1), color-stop(1, #0061a7));background:-moz-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:-webkit-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:-o-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:-ms-linear-gradient(top, #007dc1 5%, #0061a7 100%);background:linear-gradient(to bottom, #007dc1 5%, #0061a7 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#007dc1', endColorstr='#0061a7',GradientType=0);background-color:#007dc1;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;border:1px solid #124d77;display:inline-block;cursor:pointer;color:#ffffff;font-family:Arial;	font-size:13px;padding:6px 24px;text-decoration:none;text-shadow:0px 1px 0px #154682;}
 a.button,.buttongroup{display:inline-block;margin:0 2px;padding:2px 5px;text-decoration:none}
 a.button:focus,input.button:focus{border-color:#4fadd5;box-shadow:0 0 2px 1px rgba(71,135,177,0.6);-webkit-box-shadow:0 0 2px 1px rgba(71,135,177,0.6);outline:0}
-a.button span.icon,.pagenav a.button span.inner{display:inline-block;width:16px;height:13px;overflow:hidden;letter-spacing:20px;padding-top: 3px !important;}
+a.button span.icon,.pagenav a.button span.inner{display:inline-block;width:16px;height:13px;overflow:hidden;letter-spacing:20px;}
 .pagenav .countdisplay{display:inline-block;padding:3px 1em 0 1em;text-shadow:0 1px 1px #fff;min-width:16em}
 .pagenavbuttons{position:relative;}
 a.iconbutton{display:inline-block;width:20px;height:18px;text-decoration:none;text-indent:-5000px}
@@ -57,7 +57,7 @@ a.iconlink.edit:hover:before {display: inline-block;text-decoration:none}
 #taskbar .minmodetoggle{position:absolute;top:0;right:0;display:block;width:15px;height:26px;cursor:pointer;padding: 12px 0 0 5px;background:url(images/taskbar-border.png) no-repeat scroll -1px 3px}
 #mainscreen{position:absolute;top:88px;left:10px;right:10px;bottom:20px}
 #mainscreencontent{position:absolute;top:42px;left:0;right:0;bottom:0}
-#mainscreen.offset{top:132px}
+#mainscreen.offset{top:88px}
 #mainscreen .offset{top:42px}
 .minimal #mainscreen{top:62px}
 .minimal #mainscreen.offset{top:102px}
@@ -344,8 +344,7 @@ ul.toolbarmenu li a.active span.icon{color:#285c92;opacity:.99}
 .mce-btn-small .mce-ico{display:inline}
 .mce-btn-small i{line-height:16px !important;vertical-align:text-top !important}
 _:not(),_:-moz-handler-blocked,.mozilla .mce-btn-small i{line-height:20px !important}
-.minmodetoggle, a.menuselector:after, .toolbar a.button:before, .dropbutton .dropbuttontip:before, .records-table thead *:before, .records-table thead *:after, .boxpagenav a.icon.firstpage:before, .boxpagenav a.icon.prevpage:before, .boxpagenav a.icon.nextpage:before, .boxpagenav a.icon.lastpage:before, #messagestack div:after, #topnav a.button-skin-options:before, #planner_controls #new:after, #planner_controls #tomorrow:after, #planner_controls #all:after, #planner_controls #help:after, #planner_controls #filter:after, #rss a:after, a.iconbutton, #mailpreviewtoggle, .messagelist tr td span:before, .messagelist tr th span:before, .messagelist tr th a:before, #messagelist .expanded:before, #messagelist .collapsed:before, #mailboxlist .mailbox a:before, a.button, a.iconlink, #subscription-table a:before, #settings-tabs a:before, #sections-table td:before, .boxfooter span:before, .boxfooter a:before, #directorylist .addressbook a:before,#contacts-table td.contact a:before,#contacts-table td.name:before,a.deletebutton:before,.widescreen #messagelistheader .listmenu:before {font-family: FontAwesome;font-weight: normal; background: none;}
-.headers-table a.rcmaddcontact:before,#full-headers .more-headers:before, #taskbar span.button-inner:before, #topline a.button-logout:before, .moreheaderstoggle span.iconlink:before, .attachmentslist li a.delete:after,.attachmentslist li a.cancelupload:after, ul.treelist li div.treetoggle:before, .messagelist tr td.subject span.replied:before, .messagelist tr td div.collapsed:before{font-family: FontAwesome;font-weight: normal}
+.minmodetoggle, a.menuselector:after, .toolbar a.button:before, .dropbutton .dropbuttontip:before, .records-table thead *:before, .records-table thead *:after, .boxpagenav a.icon.firstpage:before, .boxpagenav a.icon.prevpage:before, .boxpagenav a.icon.nextpage:before, .boxpagenav a.icon.lastpage:before, #messagestack div:after, #topnav a.button-skin-options:before, #planner_controls #new:after, #planner_controls #tomorrow:after, #planner_controls #all:after, #planner_controls #help:after, #planner_controls #filter:after, #rss a:after, a.iconbutton, #mailpreviewtoggle, .messagelist tr td span:before, .messagelist tr th span:before, .messagelist tr th a:before, #messagelist .expanded:before, #messagelist .collapsed:before, #mailboxlist .mailbox a:before, a.button, a.iconlink, #subscription-table a:before, #settings-tabs a:before, #sections-table td:before, .boxfooter span:before, .boxfooter a:before, #directorylist .addressbook a:before,#contacts-table td.contact a:before,#contacts-table td.name:before,a.deletebutton:before,.widescreen #messagelistheader .listmenu:before,.headers-table a.rcmaddcontact:before,#full-headers .more-headers:before, #taskbar span.button-inner:before, #topline a.button-logout:before, .moreheaderstoggle span.iconlink:before, .attachmentslist li a.delete:after,.attachmentslist li a.cancelupload:after, ul.treelist li div.treetoggle:before, .messagelist tr td.subject span.replied:before, .messagelist tr td div.collapsed:before,.moreheaderstoggle .iconlink:before,.messagelist thead tr th.sortedASC a:before {font-family: ForkAwesome;font-weight: normal; background: none;}
 #messagetoolbar,#addressbooktoolbar {top:-14px;}
 #messagetoolbar.toolbar a.button:before, #addressbooktoolbar.toolbar a.button:before, #mailtoolbar.toolbar a.button:before {font-size: 28px}
 .toolbar a.button:before, #calendar .fc-button-inner:before {display: block;font-size: 2.1em;text-align: center;}
@@ -415,7 +414,9 @@ _:not(),_:-moz-handler-blocked,.mozilla .mce-btn-small i{line-height:20px !impor
 .messagelist tr .priority span.prio4:before {content: "\f01a"}
 .messagelist tr .priority span.prio5:before {content: "\f0ab"}
 .messagelist tr td.subject span.msgicon:before, .messagelist tr td.subject span.unreadchildren:before {font-size: 8px;vertical-align: middle;content: "\f10c"}
-a.firstpage span.inner:before,a.prevpage span.inner:before,a.nextpage span.inner:before,a.lastpage span.inner:before,.boxpagenav a.firstpage:before,.boxpagenav a.prevpage:before,.boxpagenav a.nextpage:before,.boxpagenav a.lastpage:before,.extwin span.icon:before {text-indent: 0;float: left;}
+.messagelist thead tr th.sortedASC a:before {content: "\f160";float: right;}
+.messagelist thead tr th.sortedDESC a:before {content: "\f161";float: right;}
+a.firstpage span.inner:before,a.prevpage span.inner:before,a.nextpage span.inner:before,a.lastpage span.inner:before,.boxpagenav a.firstpage:before,.boxpagenav a.prevpage:before,.boxpagenav a.nextpage:before,.boxpagenav a.lastpage:before {text-indent: 0;float: left;color:#285c92;padding-top: 2px;}
 a.firstpage span.inner:before {content: "\f049"}
 a.prevpage span.inner:before {content: "\f04a"}
 a.nextpage span.inner:before {content: "\f04e"}
@@ -467,7 +468,7 @@ a.lastpage span.inner:before {content: "\f050"}
 #taskbar .minmodetoggle::before {content: "\f0d8"}
 .minimal #taskbar .minmodetoggle::before {content: "\f0d7"}
 #topline a.button-logout:before { content: "\f011";font-size:14px;margin-right: 5px;}
-.messagelist tr td div.collapsed, .messagelist tr td div.expanded, .messagelist tr > .threads .listmenu, .messagelist tr .attachment span.attachment, .messagelist tr .attachment span.report, .messagelist tr .attachment span.encrypted, .messagelist tr > .priority span.priority, .messagelist tr > .priority span.prio1, .messagelist tr > .priority span.prio2, .messagelist tr > .priority span.prio3, .messagelist tr > .priority span.prio4, .messagelist tr > .priority span.prio5, .messagelist tr .flag span.flagged, .messagelist tr .flag span.unflagged, .messagelist tr .flag span.unflagged:hover, .messagelist tr > .status span.status, .messagelist tr > .status span.msgicon, .messagelist tr > .status span.deleted, .messagelist tr > .status span.unread, .messagelist tr > .status span.unreadchildren, .messagelist tr > .subject span.msgicon, .messagelist tr > .subject span.deleted, .messagelist tr > .subject span.unread, .messagelist tr > .subject span.replied, .messagelist tr > .subject span.forwarded, .messagelist tr > .subject span.unreadchildren,a.button span.icon, .pagenav a.button span.inner,.boxpagenav a.icon,.widescreen #messagelistheader .listmenu,#topline a.button-logout {background: none;}
+.messagelist tr td div.collapsed, .messagelist tr td div.expanded, .messagelist tr > .threads .listmenu, .messagelist tr .attachment span.attachment, .messagelist tr .attachment span.report, .messagelist tr .attachment span.encrypted, .messagelist tr > .priority span.priority, .messagelist tr > .priority span.prio1, .messagelist tr > .priority span.prio2, .messagelist tr > .priority span.prio3, .messagelist tr > .priority span.prio4, .messagelist tr > .priority span.prio5, .messagelist tr .flag span.flagged, .messagelist tr .flag span.unflagged, .messagelist tr .flag span.unflagged:hover, .messagelist tr > .status span.status, .messagelist tr > .status span.msgicon, .messagelist tr > .status span.deleted, .messagelist tr > .status span.unread, .messagelist tr > .status span.unreadchildren, .messagelist tr > .subject span.msgicon, .messagelist tr > .subject span.deleted, .messagelist tr > .subject span.unread, .messagelist tr > .subject span.replied, .messagelist tr > .subject span.forwarded, .messagelist tr > .subject span.unreadchildren,a.button span.icon, .pagenav a.button span.inner,.boxpagenav a.icon,.widescreen #messagelistheader .listmenu,#topline a.button-logout,.messagelist thead tr th.sortedASC a, .messagelist thead tr th.sortedDESC a {background: none;}
 #messagelistfooter #listcontrols, #messagelistfooter #listselectors {margin-left: 1em; background: #e0f7ff;}
 #messagelistfooter, #messagelistheader {background: #e0f7ff !important;}
 #messagelistfooter {position: absolute;bottom: 0;left: 0;right: 0;height: 32px;padding: 10px 6px 0;border-top: 1px solid #ddd;border-radius: 0 0 4px 4px;white-space: nowrap;box-shadow: 0 1px 0 0 #fff inset;}
@@ -498,3 +499,9 @@ a.deletebutton {background:none;}
 a.deletebutton:before {content: "\f057";text-indent: 0; float:left;color: #285c92;font-size: 16px;padding-top: 5px;}
 .ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,.ui-widget-header {background: #e0f7ff;color: #285c92;}
 .widescreen #messagelistheader .listmenu:before {content: "\f013\2009\f0d7";text-indent: 0; float:left;color: #285c92; font-size:14px;}
+.widescreen #countcontrols span.inner::before {padding-top: 2px;}
+.widescreen .pagenav a.button span.inner {padding-top: 3px !important;}
+.moreheaderstoggle .iconlink:before {content: "\f0dd";font-size: 16px;padding-left: 5px;}
+.moreheaderstoggle.remove .iconlink:before{content: "\f0de";font-size: 16px;padding-left: 5px;}
+.moreheaderstoggle .iconlink {top:0;background: none;}
+#listmenulink {margin: 0;}
