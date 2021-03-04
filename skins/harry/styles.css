@@ -348,7 +348,7 @@ _:not(),_:-moz-handler-blocked,.mozilla .mce-btn-small i{line-height:20px !impor
 #messagetoolbar,#addressbooktoolbar {top:-14px;}
 #messagetoolbar.toolbar a.button:before, #addressbooktoolbar.toolbar a.button:before, #mailtoolbar.toolbar a.button:before {font-size: 28px}
 .toolbar a.button:before, #calendar .fc-button-inner:before {display: block;font-size: 2.1em;text-align: center;}
-.toolbar a.button, a.iconbutton {background-image: none !important;height: 50px;padding-top: 0;font-size: 11px;}
+.toolbar a.button, a.iconbutton {background-image: none !important;height: 50px;padding-top: 0;font-size: 13px;}
 .dropbutton .dropbuttontip {background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;font-size: 0;height: auto;padding: 10px 4px;text-decoration: none;text-indent: 0;width: auto}
 .dropbutton .dropbuttontip:before {font-size: 14px;}
 .toolbar a.button.checkmail:before {content: "\f021";}
